@@ -38,17 +38,13 @@ const About = () => {
             />
           </h1>
           <p>
-            As a junior high school student, I became interested in coding and
-            started learning it on my own.
+            Hi! I'm a junior high school student who is learning how to code.
           </p>
           <p>
-            Since then, I have become a self-taught and amateur developer,
-            exploring the world of coding and building my skills as a frontend
-            developer.
+            Exploring the world of coding and building my skills.
           </p>
           <p>
-            Additionally, I have been working on developing discord bots, taking
-            my coding skills to the next level.
+            I have been working on developing discord bots and frontend websites
           </p>
         </div>
 

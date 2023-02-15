@@ -16,15 +16,6 @@
 
 @media screen and (max-width: 1200px) {
     .background {
-        height: auto;
-
-        .image {
-            position: fixed;
-            width: 100%;
-            height: auto;
-            opacity: 0.5;
-            -webkit-filter: drop-shadow(12px 12px 7px rgba(183, 0, 255, 0.5));
-            filter: drop-shadow(12px 12px 7px rgba(183, 0, 255, 0.5));
-        }
+        display: none;
     }
 }
