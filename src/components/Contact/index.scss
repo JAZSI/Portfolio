@@ -36,7 +36,7 @@
     input[type='email'] {
         width: 100%;
         border: 0;
-        background: #9F2B68;
+        background: #FFC0CB;
         height: 50px;
         font-size: 16px;
         color: #FFF;
@@ -47,7 +47,7 @@
     textarea {
         width: 100%;
         border: 0;
-        background: #9F2B68;
+        background: #FFC0CB;
         height: 50px;
         font-size: 16px;
         color: #FFF;
@@ -57,15 +57,20 @@
     }
 
     .flat-button {
-        color: #561D5E;
+        color: #E6E6FA;
         background: 0 0;
         font: 11px;
         letter-spacing: 3px;
         text-decoration: none;
         padding: 8px 10px;
-        border: 1px solid #561D5E;
+        border: 1px solid #E6E6FA;
         float: right;
         border-radius: 4px;
+
+        &:hover {
+            background: #FFC0CB;
+            color: #333;
+        }
     }
 }
 
@@ -89,7 +94,7 @@
         font-size: 16px;
         display: block;
         padding-top: 20px;
-        color: #561D5E;
+        color: #E6E6FA;
     }
 }
 
@@ -107,4 +112,17 @@
     opacity: 0;
     animation: backInRight 1s 1.2s;
     animation-fill-mode: forwards;
+}
+
+@media screen and (max-width: 1200px) {
+    .map-wrap {
+        float: none;
+        width: 100%;
+        height: 400px;
+        margin: 0;
+    }
+
+    .info-map {
+        display: none;
+    }
 }

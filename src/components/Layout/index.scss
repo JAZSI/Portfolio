@@ -10,7 +10,7 @@
 }
 
 .tags {
-    color: #561D5E;
+    color: #E6E6FA;
     opacity: 0.6;
     position: absolute;
     bottom: 0;
@@ -53,7 +53,7 @@
         h1 {
             font-size: 53px;
             font-family: 'Coolvetica';
-            color: #561D5E;
+            color: #E6E6FA;
             font-weight: 400;
             margin-top: 0;
             position: relative;
@@ -62,7 +62,7 @@
 
             &::before {
                 content: '<h1>';
-                color: #561D5E;
+                color: #E6E6FA;
                 font-family: 'La Belle Aurore';
                 font-size: 18px;
                 position: absolute;
@@ -74,7 +74,7 @@
     
             &::after {
                 content: '<h1/>';
-                color: #561D5E;
+                color: #E6E6FA;
                 font-family: 'La Belle Aurore';
                 font-size: 18px;
                 line-height: 18px;
@@ -111,6 +111,30 @@
     .text-animate-hover {
         &:hover {
             color: #FFF;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .page {
+        position: initial;
+    }
+
+    .container {
+        position: initial;
+        height: auto;
+        min-height: auto;
+
+        &.about-page,
+        &.contact-page {
+            .text-zone {
+                position: initial;
+                transform: none;
+                width: 100%;
+                display: block;
+                padding: 20px;
+                box-sizing: border-box;
+            }
         }
     }
 }

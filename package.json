@@ -11,15 +11,17 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "animate.css": "^4.1.1",
-    "gsap-trial": "^3.11.4",
     "loaders.css": "^0.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-leaflet": "^4.2.0",
     "react-loaders": "^3.0.1",
+    "react-particles": "^2.9.3",
     "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
+    "react-toastify": "^9.1.1",
     "sass": "^1.58.1",
+    "tsparticles": "^2.9.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

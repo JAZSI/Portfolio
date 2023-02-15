@@ -1,6 +1,9 @@
 import './index.scss';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { useEffect, useRef, useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 import emailjs from '@emailjs/browser';
 import Loader from 'react-loaders';
@@ -23,19 +26,18 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
-      .sendForm(
-        'service_0sebk36',
-        'template_2nb8pqk',
-        refForm.current,
-        'SQ7LkhgWg-NY5I2DQ'
-      )
+      .sendForm('{Service ID}', '{Template ID}', refForm.current, '{Public ID}')
       .then(
         () => {
-          alert('Message succesfully sent!');
+          toast.success('Message successfully sent!', {
+            position: toast.POSITION.BOTTOM_RIGHT,
+          });
           window.location.reload(false);
         },
         () => {
-          alert('Failed to send the message, please try again');
+          toast.error('Failed to send the message, please try again', {
+            position: toast.POSITION.BOTTOM_RIGHT,
+          });
         }
       );
   };
@@ -93,21 +95,23 @@ const Contact = () => {
         </div>
         <div className="info-map">
           Jaszi
-          <br />
-          Philippines
+          <br />Philippines
+          <br />Secret place,
+          <br />I totally live here
           <span>zumikoyazi@gmail.com</span>
         </div>
         <div className="map-wrap">
           <MapContainer
-            center={[14.35967606816159, 120.97846094971278]}
-            zoom={13}
+            center={[16.276613509945033, 120.18788336136637]}
+            zoom={4}
           >
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-            <Marker position={[14.35967606816159, 120.97846094971278]}>
+            <Marker position={[16.276613509945033, 120.18788336136637]}>
               <Popup>Jaszi lives here, come over for a cup of coffee UwU</Popup>
             </Marker>
           </MapContainer>
         </div>
+        <ToastContainer />
       </div>
       <Loader type="pacman" />
     </>

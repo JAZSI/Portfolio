@@ -5,9 +5,9 @@ import { useEffect, useState } from 'react';
 import Loader from 'react-loaders';
 
 import LogoTitle from '../../assets/images/J.png';
-import Image from '../../assets/images/Background.png';
 
 import AnimatedLetters from '../AnimatedLetters';
+import Background from '../Background';
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
@@ -71,9 +71,7 @@ const Home = () => {
             CONTACT ME
           </Link>
         </div>
-      </div>
-      <div className="container background">
-        <img src={Image} alt="Background" className="image" />
+        <Background />
       </div>
       <Loader type="pacman" />
     </>

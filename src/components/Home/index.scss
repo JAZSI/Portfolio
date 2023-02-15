@@ -19,7 +19,7 @@
         &::before {
             content: '<h1>';
             font-family: 'La Belle Aurore';
-            color: #561D5E;
+            color: #E6E6FA;
             font-size: 18px;
             position: absolute;
             margin-top: -40px;
@@ -30,7 +30,7 @@
         &::after {
             content: '<h1/>';
             font-family: 'La Belle Aurore';
-            color: #561D5E;
+            color: #E6E6FA;
             font-size: 18px;
             position: absolute;
             margin-top: 18px;
@@ -60,38 +60,47 @@
     }
 
     .flat-button {
-        color: #561D5E;
+        color: #FFFFFF;
         font-size: 13px;
         font-weight: 400;
         letter-spacing: 4px;
         font-family: sans-serif;
         text-decoration: none;
         padding: 10px 18px;
-        border: 1px solid #561D5E;
+        border: 1px solid #FFFFFF;
         margin-top: 25px;
         float: left;
         animation: fadeInAnimation 1s 1.8s backwards;
         white-space: nowrap;
 
         &:hover {
-            background: #561D5E;
+            background: #E0B0FF;
             color: #333;
         }
     }  
 }
 
-.background {
-    position: relative;
-    z-index: 0;
-    height: 100vh;
-
-    .image {
-        position: absolute;
-        height: 100%;
-        right: 0;
-        opacity: 0.5;
-        -webkit-filter: drop-shadow(12px 12px 7px rgba(255, 0, 0, 0.5));
-        filter: drop-shadow(12px 12px 7px rgba(255, 0, 0, 0.5));
+@media screen and (max-width: 1200px) {
+    .tags,
+    .home-page h1::before,
+    .home-page h1::after {
+        display: none;
     }
-    
+
+    .home-page {
+        .text-zone {
+            position: initial;
+            width: 100%;
+            transform: none;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .flat-button {
+            float: none;
+            display: block;
+            margin: 20px auto 0 auto;
+            width: 125px;
+        }
+    }
 }

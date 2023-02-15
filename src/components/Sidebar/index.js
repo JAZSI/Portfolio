@@ -5,25 +5,40 @@ import {
   faTwitch,
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons';
+import {
+  faEnvelope,
+  faHome,
+  faUser,
+  faBars,
+  faClose,
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link, NavLink } from 'react-router-dom';
 
 import LogoSubtitle from '../../assets/images/Jaszi.png';
-import Logo from '../../assets/images/Logo.png';
+import Logo from '../../assets/images/J.png';
+import { useState } from 'react';
 
 const Sidebar = () => {
+  const [showNav, setShowNav] = useState(false);
+
   return (
     <div className="nav-bar">
       <Link className="logo" to="/">
         <img src={Logo} alt="Logo" />
         <img className="sub-logo" src={LogoSubtitle} alt="Jaszi" />
       </Link>
-      <nav>
-        <NavLink exact="true" activeclassname="active" to="/">
+      <nav className={showNav ? 'mobile-show' : ''}>
+        <NavLink
+          exact="true"
+          activeclassname="active"
+          to="/"
+          onClick={() => setShowNav(false)}
+        >
           <FontAwesomeIcon icon={faHome} color="#4D4D4E" />
         </NavLink>
         <NavLink
+          onClick={() => setShowNav(false)}
           exact="true"
           activeclassname="active"
           className="about-link"
@@ -32,6 +47,7 @@ const Sidebar = () => {
           <FontAwesomeIcon icon={faUser} color="#4D4D4E" />
         </NavLink>
         <NavLink
+          onClick={() => setShowNav(false)}
           exact="true"
           activeclassname="active"
           className="contact-link"
@@ -39,6 +55,13 @@ const Sidebar = () => {
         >
           <FontAwesomeIcon icon={faEnvelope} color="#4D4D4E" />
         </NavLink>
+        <FontAwesomeIcon
+          onClick={() => setShowNav(false)}
+          icon={faClose}
+          color="#E6E6FA"
+          size="3x"
+          className="close-icon"
+        />
       </nav>
       <ul>
         <li>
@@ -47,16 +70,31 @@ const Sidebar = () => {
           </a>
         </li>
         <li>
-          <a target="_blank" rel="noreferrer" href="https://www.youtube.com/channel/UCqKWA0x62qEaPlWOM0ZRv7A">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.youtube.com/channel/UCqKWA0x62qEaPlWOM0ZRv7A"
+          >
             <FontAwesomeIcon icon={faYoutube} color="#4D4D4E" />
           </a>
         </li>
         <li>
-          <a target="_blank" rel="noreferrer" href="https://www.twitch.tv/jaszi_ow">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.twitch.tv/jaszi_ow"
+          >
             <FontAwesomeIcon icon={faTwitch} color="#4D4D4E" />
           </a>
         </li>
       </ul>
+      <FontAwesomeIcon
+        onClick={() => setShowNav(true)}
+        icon={faBars}
+        color="#E6E6FA"
+        size="3x"
+        className="hamburger-icon"
+      />
     </div>
   );
 };
