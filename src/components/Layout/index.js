@@ -25,7 +25,7 @@ const Layout = () => {
         type: 'circle',
       },
       opacity: {
-        value: 1,
+        value: 0.3,
       },
       size: {
         value: { min: 1, max: 8 },
@@ -34,7 +34,7 @@ const Layout = () => {
         enable: true,
         distance: 150,
         color: '#808080',
-        opacity: 0.4,
+        opacity: 0.2,
         width: 1,
       },
       move: {
