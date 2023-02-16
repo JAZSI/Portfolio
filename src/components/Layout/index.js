@@ -12,7 +12,7 @@ const Layout = () => {
   const options = {
     particles: {
       number: {
-        value: 80,
+        value: 50,
         density: {
           enable: true,
           area: 800,
@@ -51,21 +51,6 @@ const Layout = () => {
         onHover: {
           enable: true,
           mode: 'grab',
-        },
-        onClick: {
-          enable: true,
-          mode: 'push',
-        },
-      },
-      modes: {
-        grab: {
-          distance: 140,
-          links: {
-            opacity: 1,
-          },
-        },
-        push: {
-          quantity: 4,
         },
       },
     },

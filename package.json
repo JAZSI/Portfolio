@@ -22,6 +22,7 @@
     "react-toastify": "^9.1.1",
     "sass": "^1.58.1",
     "tsparticles": "^2.9.3",
+    "typewriter-effect": "^2.19.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

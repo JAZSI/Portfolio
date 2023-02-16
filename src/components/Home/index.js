@@ -2,6 +2,7 @@ import './index.scss';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
+import Typewriter from 'typewriter-effect';
 import Loader from 'react-loaders';
 
 import LogoTitle from '../../assets/images/J.png';
@@ -70,7 +71,19 @@ const Home = () => {
               idx={20}
             />
           </h1>
-          <h2>Frontend Developer / Discord Bot Developer</h2>
+          <h2>
+            I am a&nbsp;
+            <Typewriter
+            options={{
+              strings: ['Frontend Developer', 'Discord Bot Developer'],
+              autoStart: true,
+              loop: true,
+              delay: 50,
+              cursor: '_',
+              deleteSpeed: 50,
+            }}
+          />
+          </h2>
           <Link to="/contact" className="flat-button">
             CONTACT ME
           </Link>

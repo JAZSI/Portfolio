@@ -1,6 +1,7 @@
 import './index.scss';
 
 import {
+  faDiscord,
   faGithub,
   faTwitch,
   faYoutube,
@@ -35,7 +36,7 @@ const Sidebar = () => {
           to="/"
           onClick={() => setShowNav(false)}
         >
-          <FontAwesomeIcon icon={faHome} color="#4D4D4E" />
+          <FontAwesomeIcon icon={faHome} color="#E6E6FA" />
         </NavLink>
         <NavLink
           onClick={() => setShowNav(false)}
@@ -44,7 +45,7 @@ const Sidebar = () => {
           className="about-link"
           to="/about"
         >
-          <FontAwesomeIcon icon={faUser} color="#4D4D4E" />
+          <FontAwesomeIcon icon={faUser} color="#E6E6FA" />
         </NavLink>
         <NavLink
           onClick={() => setShowNav(false)}
@@ -53,7 +54,16 @@ const Sidebar = () => {
           className="contact-link"
           to="/contact"
         >
-          <FontAwesomeIcon icon={faEnvelope} color="#4D4D4E" />
+          <FontAwesomeIcon icon={faEnvelope} color="#E6E6FA" />
+        </NavLink>
+        <NavLink
+          onClick={() => setShowNav(false)}
+          exact="true"
+          activeclassname="active"
+          className="discordbots-link"
+          to="/discordbots"
+        >
+          <FontAwesomeIcon icon={faDiscord} color="#E6E6FA" />
         </NavLink>
         <FontAwesomeIcon
           onClick={() => setShowNav(false)}
@@ -66,7 +76,7 @@ const Sidebar = () => {
       <ul>
         <li>
           <a target="_blank" rel="noreferrer" href="https://github.com/JAZSI">
-            <FontAwesomeIcon icon={faGithub} color="#4D4D4E" />
+            <FontAwesomeIcon icon={faGithub} color="#E6E6FA" />
           </a>
         </li>
         <li>
@@ -75,7 +85,7 @@ const Sidebar = () => {
             rel="noreferrer"
             href="https://www.youtube.com/channel/UCqKWA0x62qEaPlWOM0ZRv7A"
           >
-            <FontAwesomeIcon icon={faYoutube} color="#4D4D4E" />
+            <FontAwesomeIcon icon={faYoutube} color="#E6E6FA" />
           </a>
         </li>
         <li>
@@ -84,7 +94,7 @@ const Sidebar = () => {
             rel="noreferrer"
             href="https://www.twitch.tv/jaszi_ow"
           >
-            <FontAwesomeIcon icon={faTwitch} color="#4D4D4E" />
+            <FontAwesomeIcon icon={faTwitch} color="#E6E6FA" />
           </a>
         </li>
       </ul>
