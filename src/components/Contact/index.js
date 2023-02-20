@@ -95,19 +95,24 @@ const Contact = () => {
         </div>
         <div className="info-map">
           Jaszi
-          <br />Philippines
-          <br />Secret place,
+          <br />
+          Philippines
+          <br />
+          Secret place,
           <br />I totally live here
           <span>zumikoyazi@gmail.com</span>
         </div>
         <div className="map-wrap">
           <MapContainer
-            center={[16.276613509945033, 120.18788336136637]}
+            center={[14.353578139896404, 120.96043511598609]}
             zoom={4}
           >
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-            <Marker position={[16.276613509945033, 120.18788336136637]}>
-              <Popup>Jaszi lives here, come over for a cup of coffee UwU</Popup>
+            <Marker position={[14.353578139896404, 120.96043511598609]}>
+              <Popup>
+                Jaszi totally lives here, don't come over for a cup of coffee
+                UwU
+              </Popup>
             </Marker>
           </MapContainer>
         </div>

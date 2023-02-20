@@ -40,9 +40,7 @@ const About = () => {
           <p>
             Hi! I'm a junior high school student who is learning how to code.
           </p>
-          <p>
-            Exploring the world of coding and building my skills.
-          </p>
+          <p>Exploring the world of coding and building my skills.</p>
           <p>
             I have been working on developing discord bots and frontend websites
           </p>

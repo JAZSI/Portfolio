@@ -1,128 +1,128 @@
 .contact-form {
+  width: 100%;
+  margin-top: 20px;
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      margin-bottom: 10px;
+      overflow: hidden;
+      display: block;
+      position: relative;
+      opacity: 0;
+      animation: fadeInUp 2s 2s;
+      animation-fill-mode: forwards;
+      clear: both;
+    }
+
+    li.half {
+      width: 49%;
+      margin-left: 2%;
+      float: left;
+      clear: none;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  input[type='text'],
+  input[type='email'] {
     width: 100%;
-    margin-top: 20px;
+    border: 0;
+    background: #ffc0cb;
+    height: 50px;
+    font-size: 16px;
+    color: #fff;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
 
-    ul {
-        padding: 0;
-        margin: 0;
+  textarea {
+    width: 100%;
+    border: 0;
+    background: #ffc0cb;
+    height: 50px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px;
+    min-height: 150px;
+    box-sizing: border-box;
+  }
 
-        li {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            margin-bottom: 10px;
-            overflow: hidden;
-            display: block;
-            position: relative;
-            opacity: 0;
-            animation: fadeInUp 2s 2s;
-            animation-fill-mode: forwards;
-            clear: both;
-        }
+  .flat-button {
+    color: #e6e6fa;
+    background: 0 0;
+    font: 11px;
+    letter-spacing: 3px;
+    text-decoration: none;
+    padding: 8px 10px;
+    border: 1px solid #e6e6fa;
+    float: right;
+    border-radius: 4px;
 
-        li.half {
-            width: 49%;
-            margin-left: 2%;
-            float: left;
-            clear: none;
-
-            &:first-child {
-                margin-left: 0;
-            }
-        }
+    &:hover {
+      background: #ffc0cb;
+      color: #333;
     }
-
-    input[type='text'],
-    input[type='email'] {
-        width: 100%;
-        border: 0;
-        background: #FFC0CB;
-        height: 50px;
-        font-size: 16px;
-        color: #FFF;
-        padding: 0 20px;
-        box-sizing: border-box;
-    }
-
-    textarea {
-        width: 100%;
-        border: 0;
-        background: #FFC0CB;
-        height: 50px;
-        font-size: 16px;
-        color: #FFF;
-        padding: 20px;
-        min-height: 150px;
-        box-sizing: border-box;
-    }
-
-    .flat-button {
-        color: #E6E6FA;
-        background: 0 0;
-        font: 11px;
-        letter-spacing: 3px;
-        text-decoration: none;
-        padding: 8px 10px;
-        border: 1px solid #E6E6FA;
-        float: right;
-        border-radius: 4px;
-
-        &:hover {
-            background: #FFC0CB;
-            color: #333;
-        }
-    }
+  }
 }
 
 .info-map {
-    position: absolute;
-    background-color: #000000;
-    top: 50px;
-    right: 30%;
-    z-index: 999999;
-    width: 267px;
-    padding: 20px;
-    color: #FFFFFF;
-    font-family: 'Helvetica';
-    font-size: 17px;
-    font-weight: 300;
-    opacity: 0;
-    animation: fadeIn 1s 1.5s;
-    animation-fill-mode: forwards;
+  position: absolute;
+  background-color: #000000;
+  top: 50px;
+  right: 30%;
+  z-index: 999999;
+  width: 267px;
+  padding: 20px;
+  color: #ffffff;
+  font-family: 'Helvetica';
+  font-size: 17px;
+  font-weight: 300;
+  opacity: 0;
+  animation: fadeIn 1s 1.5s;
+  animation-fill-mode: forwards;
 
-    span {
-        font-size: 16px;
-        display: block;
-        padding-top: 20px;
-        color: #E6E6FA;
-    }
+  span {
+    font-size: 16px;
+    display: block;
+    padding-top: 20px;
+    color: #e6e6fa;
+  }
 }
 
 .map-wrap {
-    background: rgba(8, 253, 216, 0.1);
-    float: right;
-    width: 53%;
-    height: 100%;
+  background: rgba(8, 253, 216, 0.1);
+  float: right;
+  width: 53%;
+  height: 100%;
 }
 
 .leaflet-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    animation: backInRight 1s 1.2s;
-    animation-fill-mode: forwards;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: backInRight 1s 1.2s;
+  animation-fill-mode: forwards;
 }
 
 @media screen and (max-width: 1200px) {
-    .map-wrap {
-        float: none;
-        width: 100%;
-        height: 400px;
-        margin: 0;
-    }
+  .map-wrap {
+    float: none;
+    width: 100%;
+    height: 400px;
+    margin: 0;
+  }
 
-    .info-map {
-        display: none;
-    }
+  .info-map {
+    display: none;
+  }
 }

@@ -74,15 +74,15 @@ const Home = () => {
           <h2>
             I am a&nbsp;
             <Typewriter
-            options={{
-              strings: ['Frontend Developer', 'Discord Bot Developer'],
-              autoStart: true,
-              loop: true,
-              delay: 50,
-              cursor: '_',
-              deleteSpeed: 50,
-            }}
-          />
+              options={{
+                strings: ['Frontend Developer', 'Discord Bot Developer'],
+                autoStart: true,
+                loop: true,
+                delay: 50,
+                cursor: '_',
+                deleteSpeed: 50,
+              }}
+            />
           </h2>
           <Link to="/contact" className="flat-button">
             CONTACT ME

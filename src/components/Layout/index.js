@@ -1,7 +1,7 @@
 import './index.scss';
 
 import { loadFull } from 'tsparticles';
-import { useCallback } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 
 import Particles from 'react-particles';
@@ -9,6 +9,8 @@ import Particles from 'react-particles';
 import Sidebar from '../Sidebar';
 
 const Layout = () => {
+  const [isPageVisible, setIsPageVisible] = useState(true); // add state to track page visibility
+
   const options = {
     particles: {
       number: {
@@ -59,6 +61,22 @@ const Layout = () => {
   const particlesInit = useCallback(async (engine) => {
     await loadFull(engine);
   }, []);
+
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      setIsPageVisible(!document.hidden);
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, []); // add effect to listen for page visibility changes
+
+  useEffect(() => {
+    document.title = isPageVisible ? 'Jaszi' : 'Come back (╥﹏╥)'; // change the document title based on page visibility
+  }, [isPageVisible]);
 
   return (
     <div className="App">

@@ -1,7 +1,6 @@
 import './index.scss';
 
 import {
-  faDiscord,
   faGithub,
   faTwitch,
   faYoutube,
@@ -55,15 +54,6 @@ const Sidebar = () => {
           to="/contact"
         >
           <FontAwesomeIcon icon={faEnvelope} color="#E6E6FA" />
-        </NavLink>
-        <NavLink
-          onClick={() => setShowNav(false)}
-          exact="true"
-          activeclassname="active"
-          className="discordbots-link"
-          to="/discordbots"
-        >
-          <FontAwesomeIcon icon={faDiscord} color="#E6E6FA" />
         </NavLink>
         <FontAwesomeIcon
           onClick={() => setShowNav(false)}
