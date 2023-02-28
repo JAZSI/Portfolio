@@ -6,6 +6,7 @@ import {
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
 import {
+  faFolder,
   faEnvelope,
   faHome,
   faUser,
@@ -29,6 +30,7 @@ const Sidebar = () => {
         <img className="sub-logo" src={LogoSubtitle} alt="Jaszi" />
       </Link>
       <nav className={showNav ? 'mobile-show' : ''}>
+        {/* Home button */}
         <NavLink
           exact="true"
           activeclassname="active"
@@ -37,6 +39,7 @@ const Sidebar = () => {
         >
           <FontAwesomeIcon icon={faHome} color="#E6E6FA" />
         </NavLink>
+        {/* About button */}
         <NavLink
           onClick={() => setShowNav(false)}
           exact="true"
@@ -46,6 +49,7 @@ const Sidebar = () => {
         >
           <FontAwesomeIcon icon={faUser} color="#E6E6FA" />
         </NavLink>
+        {/* Contact button */}
         <NavLink
           onClick={() => setShowNav(false)}
           exact="true"
@@ -54,6 +58,16 @@ const Sidebar = () => {
           to="/contact"
         >
           <FontAwesomeIcon icon={faEnvelope} color="#E6E6FA" />
+        </NavLink>
+        {/* Portfolio button */}
+        <NavLink
+          onClick={() => setShowNav(false)}
+          exact="true"
+          activeclassname="active"
+          className="portfolio-link"
+          to="/portfolio"
+        >
+          <FontAwesomeIcon icon={faFolder} color="#E6E6FA" />
         </NavLink>
         <FontAwesomeIcon
           onClick={() => setShowNav(false)}

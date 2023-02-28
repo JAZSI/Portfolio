@@ -1,0 +1,28 @@
+.profileCard {
+    min-height: 30vh;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.githubCard {
+    align-items: center;
+	justify-content: center;
+    padding-left: 15%;
+    padding-right: 10%;
+}
+
+@media screen and (max-width: 1200px) {
+    .githubCard {
+        align-items: center;
+	    justify-content: center;
+        padding-top: 20px;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .profileCard {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}

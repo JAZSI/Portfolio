@@ -88,6 +88,13 @@
       }
     }
 
+    a.portfolio-link {
+      &:after {
+        content: 'PORTFOLIO';
+        // font-size: 18px;
+      }
+    }
+
     a.active {
       svg {
         color: #E5B8F4;
