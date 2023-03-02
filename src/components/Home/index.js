@@ -8,7 +8,7 @@ import Loader from 'react-loaders';
 import LogoTitle from '../../assets/images/J.png';
 
 import AnimatedLetters from '../AnimatedLetters';
-import Background from '../Background';
+// import Background from '../Background';
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
@@ -88,7 +88,7 @@ const Home = () => {
             CONTACT ME
           </Link>
         </div>
-        <Background />
+        {/* <Background /> */}
       </div>
       <Loader type="pacman" />
     </>

@@ -5,7 +5,7 @@ $primary-color: #e6e6fa;
 
 @font-face {
   font-family: 'Helvetica Neue';
-  src: url('./assets/fonts/helvetica-neu.ttf') format('ttf');
+  src: url('./assets/fonts/helvetica-neu.ttf') format('truetype');
 }
 
 @font-face {
@@ -16,6 +16,16 @@ $primary-color: #e6e6fa;
 @font-face {
   font-family: 'Coolvetica';
   src: url('./assets/fonts/CoolveticaRg-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Playfair Display SC';
+  src: url('./assets/fonts/PlayfairDisplaySC-Regular.ttf') format('truetype');
 }
 
 input,

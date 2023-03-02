@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom';
 import './index.scss';
+
+import { Link } from 'react-router-dom';
 
 function ProfileCard({ icon }) {
   return (
@@ -7,11 +8,11 @@ function ProfileCard({ icon }) {
       <div className="image">
         <img src={icon} alt="Profile Picture" />
       </div>
-      <div className="name">Projects by Jaszi</div>
+      <div className="name">Jaszi</div>
       <div className="content">
         <p>Self-taught | Amateur developer Learning how to code UwU</p>
         <div className="buttons">
-          <Link to="https://github.com/JAZSI">Github</Link>
+          <Link to="/contact">CONTACT ME</Link>
         </div>
       </div>
     </div>
