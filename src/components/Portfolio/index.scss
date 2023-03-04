@@ -37,8 +37,8 @@
         position: absolute;
         z-index: -1;
         background: #560bad;
-        height: 150px;
-        width: 200px;
+        height: 100px;
+        width: 400px;
         border-radius: 50%;
       }
 
@@ -78,16 +78,19 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .githubCard {
-    align-items: center;
-    justify-content: center;
-    padding-top: 20px;
+  .profileCard {
     padding-left: 10%;
     padding-right: 10%;
   }
 
-  .profileCard {
-    padding-left: 10%;
-    padding-right: 10%;
+  .githubCard {
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+
+    h1 {
+      text-align: center;
+    }
   }
 }

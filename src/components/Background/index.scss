@@ -1,13 +1,13 @@
 .background {
   position: relative;
   z-index: 0;
-  height: 95vh;
-
+  height: 100vh;
+  
   .image {
     position: absolute;
     height: 100%;
     right: 10%;
-    opacity: 0.6;
+    opacity: 0.3;
   }
 }
 

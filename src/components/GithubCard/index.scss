@@ -6,6 +6,7 @@
     height: 600px;
     width: 1100px;
     overflow-y: scroll;
+    padding: 30px;
 
     &::-webkit-scrollbar {
       width: 8px;
@@ -22,31 +23,26 @@
 
     .card-row {
       width: calc(33.33% - 30px);
-      margin: 0 5px 5px 5px;
     }
 
     .card {
+      cursor: pointer;
       font-family: 'Coolvetica';
       background: linear-gradient(to top right, #9B59B6, #F8A5C2);
       border: 3px solid #e5d1fa;
       margin-bottom: 15px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
       border-radius: 10px;
       padding: 20px;
       height: 120px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out,
-        transform 0.3s ease-in-out;
+      box-shadow: 0 2px 4px #F5D5E5;
+      transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-out;
 
       &:hover {
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-        border-color: #865dff;
-        transform: scale(1.02);
-        h3 {
-          color: #865dff;
-        }
+        box-shadow: 0 8px 16px #F5D5E5;
+        transform: translateY(-5px);
       }
 
       h3 {
@@ -76,6 +72,7 @@
 
         a {
           color: #0077cc;
+          text-decoration: none;
 
           &:hover {
             text-decoration: underline;
@@ -89,11 +86,16 @@
 @media screen and (max-width: 1200px) {
   .github {
     .card-container {
+      height: auto;
+      width: auto;
       justify-content: center;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
 
       .card-row {
         width: 100%;
-        margin: 0 0 30px 0;
       }
 
       .card {

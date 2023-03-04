@@ -91,7 +91,6 @@
     a.portfolio-link {
       &:after {
         content: 'PORTFOLIO';
-        // font-size: 18px;
       }
     }
 
@@ -147,7 +146,7 @@
     nav {
       width: 100%;
       height: 100%;
-      background: linear-gradient(0deg, #C060A1 0, #2D033B);
+      background: linear-gradient(0deg, #1E1E1E 0, #2D033B);
       top: 0;
       left: 0;
       position: fixed;

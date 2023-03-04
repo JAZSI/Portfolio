@@ -13,8 +13,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Loader from 'react-loaders';
 
-import icon from '../../assets/images/icon.png';
-
 import GithubCard from '../GithubCard';
 import ProfileCard from '../PorfileCard';
 import AnimatedLetters from '../AnimatedLetters';
@@ -36,7 +34,7 @@ function Portfolio() {
     <>
       <div className="container portfolio-page">
         <div className="profileCard">
-          <ProfileCard icon={icon} />
+          <ProfileCard icon="https://avatars.githubusercontent.com/u/79008835" />
           <div className="text-zone">
             <h1>
               <AnimatedLetters

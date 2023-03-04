@@ -8,22 +8,19 @@ import Loader from 'react-loaders';
 import LogoTitle from '../../assets/images/J.png';
 
 import AnimatedLetters from '../AnimatedLetters';
-// import Background from '../Background';
+import Background from '../Background';
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
   const nameArray = ['a', 's', 'z', 'i'];
   const jobArray = [
-    'S',
-    'e',
-    'l',
-    'f',
-    '-',
-    't',
-    'a',
-    'u',
-    'g',
-    'h',
+    'H',
+    'o',
+    'b',
+    'b',
+    'y',
+    'i',
+    's',
     't',
     ' ',
     'D',
@@ -75,7 +72,12 @@ const Home = () => {
             I am a&nbsp;
             <Typewriter
               options={{
-                strings: ['Frontend Developer', 'Discord Bot Developer'],
+                strings: [
+                  'Frontend Developer',
+                  'Discord Bot Developer',
+                  'Self-taught Developer',
+                  'Hobbyist Developer',
+                ],
                 autoStart: true,
                 loop: true,
                 delay: 50,
@@ -88,8 +90,8 @@ const Home = () => {
             CONTACT ME
           </Link>
         </div>
-        {/* <Background /> */}
       </div>
+      <Background />
       <Loader type="pacman" />
     </>
   );

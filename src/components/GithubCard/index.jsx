@@ -20,6 +20,10 @@ const GithubCard = ({ username }) => {
     const numCols = 3;
     const numRows = Math.ceil(projects.length / numCols);
 
+    const handleCardClick = (projectUrl) => {
+      window.open(projectUrl, '_blank');
+    };
+
     for (let i = 0; i < numRows; i++) {
       const rowItems = [];
       for (let j = 0; j < numCols; j++) {
@@ -29,7 +33,11 @@ const GithubCard = ({ username }) => {
         }
         const project = projects[index];
         rowItems.push(
-          <div className="card" key={project.id}>
+          <div
+            className="card"
+            key={project.id}
+            onClick={() => handleCardClick(project.html_url)}
+          >
             <h3>{project.name}</h3>
             <p>{project.description}</p>
             <div className="card-footer">

@@ -9,7 +9,7 @@ import Particles from 'react-particles';
 import Sidebar from '../Sidebar';
 
 const Layout = () => {
-  const [isPageVisible, setIsPageVisible] = useState(true); // add state to track page visibility
+  const [isPageVisible, setIsPageVisible] = useState(true);
 
   const options = {
     particles: {
@@ -72,10 +72,10 @@ const Layout = () => {
     return () => {
       document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
-  }, []); // add effect to listen for page visibility changes
+  }, []);
 
   useEffect(() => {
-    document.title = isPageVisible ? 'Jaszi' : 'Come back (╥﹏╥)'; // change the document title based on page visibility
+    document.title = isPageVisible ? 'Jaszi' : 'Come back (╥﹏╥)';
   }, [isPageVisible]);
 
   return (
