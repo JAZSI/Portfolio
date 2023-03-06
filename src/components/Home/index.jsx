@@ -13,27 +13,7 @@ import Background from '../Background';
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
   const nameArray = ['a', 's', 'z', 'i'];
-  const jobArray = [
-    'H',
-    'o',
-    'b',
-    'b',
-    'y',
-    'i',
-    's',
-    't',
-    ' ',
-    'D',
-    'e',
-    'v',
-    'e',
-    'l',
-    'o',
-    'p',
-    'e',
-    'r',
-    '.',
-  ];
+  const jobArray = ['H', 'o', 'b', 'b', 'y', 'i', 's', 't'];
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
