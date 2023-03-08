@@ -1,7 +1,5 @@
 # Portfolio
 
-From [This](https://www.youtube.com/watch?v=ESHaail1eGc&ab_channel=CodewithSloba) tutorial by [CodewithSloba](https://www.youtube.com/@CodewithSloba) || https://github.com/bobangajicsm
-
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
