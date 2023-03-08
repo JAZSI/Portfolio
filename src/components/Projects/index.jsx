@@ -1,9 +1,7 @@
 import './index.scss';
 
 import { useEffect, useState } from 'react';
-
 import Loader from 'react-loaders';
-
 import AnimatedLetters from '../AnimatedLetters';
 import ProjectsData from '../ProjectsData';
 
@@ -15,18 +13,10 @@ function Projects() {
       setLetterClass('text-animate-hover');
     }, 3000);
 
-    return () => {
-      clearTimeout(timeoutId);
-    };
+    return () => clearTimeout(timeoutId);
   }, []);
 
-  const handleClickGithub = () => {
-    window.open('https://github.com/JAZSI', '_blank');
-  };
-
-  const handleClickHuggingface = () => {
-    window.open('https://huggingface.co/Jaszii', '_blank');
-  };
+  const openLink = (link) => window.open(link, '_blank');
 
   return (
     <>
@@ -40,10 +30,16 @@ function Projects() {
             />
           </h1>
           <div className="profile-buttons">
-            <button onClick={handleClickGithub}>GitHub Profile</button>
+            <button onClick={() => openLink('https://github.com/JAZSI')}>
+              GitHub Profile
+            </button>
             <br />
-            <button onClick={handleClickHuggingface}>
+            <button onClick={() => openLink('https://huggingface.co/Jaszii')}>
               Hugging Face Profile
+            </button>
+            <br />
+            <button onClick={() => openLink('https://replit.com/@JASZI')}>
+              Replit Profile
             </button>
           </div>
         </div>

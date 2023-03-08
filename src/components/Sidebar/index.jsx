@@ -6,6 +6,7 @@ import {
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
 import {
+  faGamepad,
   faFolder,
   faEnvelope,
   faHome,
@@ -68,6 +69,16 @@ const Sidebar = () => {
           to="/projects"
         >
           <FontAwesomeIcon icon={faFolder} color="#E6E6FA" />
+        </NavLink>
+        {/* Games button */}
+        <NavLink
+          onClick={() => setShowNav(false)}
+          exact="true"
+          activeclassname="active"
+          className="games-link"
+          to="/games"
+        >
+          <FontAwesomeIcon icon={faGamepad} color="#E6E6FA" />
         </NavLink>
         <FontAwesomeIcon
           onClick={() => setShowNav(false)}

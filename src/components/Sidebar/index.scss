@@ -93,6 +93,12 @@
         content: 'PROJECTS';
       }
     }
+    
+    a.games-link {
+      &:after {
+        content: 'GAMES';
+      }
+    }
 
     a.active {
       svg {
