@@ -39,7 +39,8 @@
 }
 
 .about-page,
-.contact-page {
+.contact-page,
+.projects-page {
   .text-zone {
     position: absolute;
     left: 10%;
@@ -87,7 +88,7 @@
     }
 
     p {
-      font-style: 13px;
+      font-size: 13px;
       color: #fff;
       font-family: sans-serif;
       font-weight: 300;
@@ -132,7 +133,8 @@
     min-height: auto;
 
     &.about-page,
-    &.contact-page {
+    &.contact-page,
+    &.projects-page {
       .text-zone {
         position: initial;
         transform: none;

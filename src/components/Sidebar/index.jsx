@@ -59,13 +59,13 @@ const Sidebar = () => {
         >
           <FontAwesomeIcon icon={faEnvelope} color="#E6E6FA" />
         </NavLink>
-        {/* Portfolio button */}
+        {/* Projects button */}
         <NavLink
           onClick={() => setShowNav(false)}
           exact="true"
           activeclassname="active"
-          className="portfolio-link"
-          to="/portfolio"
+          className="project-link"
+          to="/projects"
         >
           <FontAwesomeIcon icon={faFolder} color="#E6E6FA" />
         </NavLink>
