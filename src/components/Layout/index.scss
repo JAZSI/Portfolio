@@ -10,7 +10,7 @@
 }
 
 .tags {
-  color: #e6e6fa;
+  color: #ff69b4;
   opacity: 0.6;
   position: absolute;
   bottom: 0;
@@ -39,8 +39,9 @@
 }
 
 .about-page,
-.contact-page,
-.projects-page {
+.projects-page,
+.skills-page,
+.contact-page {
   .text-zone {
     position: absolute;
     left: 10%;
@@ -54,7 +55,7 @@
     h1 {
       font-size: 53px;
       font-family: 'Coolvetica';
-      color: #e6e6fa;
+      color: #e6b8e6;
       font-weight: 400;
       margin-top: 0;
       position: relative;
@@ -63,7 +64,7 @@
 
       &::before {
         content: '<h1>';
-        color: #e6e6fa;
+        color: #ff69b4;
         font-family: 'La Belle Aurore';
         font-size: 18px;
         position: absolute;
@@ -75,7 +76,7 @@
 
       &::after {
         content: '<h1/>';
-        color: #e6e6fa;
+        color: #ff69b4;
         font-family: 'La Belle Aurore';
         font-size: 18px;
         line-height: 18px;
@@ -127,8 +128,9 @@
     min-height: auto;
 
     &.about-page,
-    &.contact-page,
-    &.projects-page {
+    &.projects-page,
+    &.skills-page,
+    &.contact-page {
       .text-zone {
         position: initial;
         transform: none;

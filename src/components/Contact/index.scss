@@ -36,10 +36,10 @@
   input[type='email'] {
     width: 100%;
     border: 0;
-    background: #e6ccff;
+    background: #e6b8e6;
     height: 50px;
     font-size: 16px;
-    color: #fff;
+    color: #000000;
     padding: 0 20px;
     box-sizing: border-box;
   }
@@ -47,33 +47,35 @@
   textarea {
     width: 100%;
     border: 0;
-    background: #e6ccff;
+    background: #e6b8e6;
     height: 50px;
     font-size: 16px;
-    color: #fff;
+    color: #000000;
     padding: 20px;
     min-height: 150px;
     box-sizing: border-box;
   }
 
   .flat-button {
-    color: #e6e6fa;
+    color: #e6b8e6;
     background: 0 0;
     font: 11px;
     letter-spacing: 3px;
     text-decoration: none;
     padding: 8px 10px;
-    border: 1px solid #e6e6fa;
+    border: 1px solid #e6b8e6;
     float: right;
     border-radius: 4px;
+    transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
 
     &:hover {
-      background: #e6ccff;
-      color: #333;
+      background: #e6b8e6;
+      color: #000000;
     }
   }
 
-  .success-message, .error-message {
+  .success-message,
+  .error-message {
     font-size: 1.2rem;
     font-weight: 500;
     padding: 1rem;
@@ -81,12 +83,12 @@
     border-radius: 5px;
     text-align: center;
   }
-  
+
   .success-message {
     background-color: #34c759;
     color: #fff;
   }
-  
+
   .error-message {
     background-color: #ff3b30;
     color: #fff;
@@ -113,12 +115,19 @@
     font-size: 16px;
     display: block;
     padding-top: 20px;
-    color: #e6e6fa;
+    color: #e6b8e6;
   }
 }
 
 .map-wrap {
-  // background: #e6ccff;
+  background: linear-gradient(
+    to bottom right,
+    #70010175,
+    #80008075,
+    #ba55d375,
+    #9370db75
+  );
+  border-radius: 15px;
   float: right;
   width: 53%;
   height: 100%;

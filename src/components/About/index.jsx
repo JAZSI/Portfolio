@@ -39,11 +39,24 @@ const About = () => {
             />
           </h1>
           <p>
-            Hi! I'm a junior high school student who is learning how to code.
+            Hi! I'm a junior high school student who is learning how to code. I
+            find coding to be an exciting and challenging field, and I'm eager
+            to explore all that it has to offer. With so many different
+            programming languages and technologies to choose from, there's
+            always something new to learn.
           </p>
-          <p>Exploring the world of coding and building my skills.</p>
           <p>
-            I have been working on developing discord bots and frontend websites
+            Currently, I'm focused on developing my skills in two areas:
+            building discord bots and creating frontend websites. Both of these
+            areas have been incredibly rewarding to work on, and I've already
+            made a lot of progress. With each project that I complete, I'm able
+            to hone my skills and take on even more challenging projects.
+          </p>
+          <p>
+            Overall, I'm really enjoying my journey into the world of coding.
+            I'm excited to see where it takes me in the future, and I'm looking
+            forward to all the opportunities that await me as I continue to
+            learn and grow in this field.
           </p>
         </div>
 
@@ -70,7 +83,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <Loader type="pacman" />
+      <Loader type="line-scale-pulse-out-rapid" />
     </>
   );
 };

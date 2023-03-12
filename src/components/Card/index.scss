@@ -6,28 +6,28 @@
   max-width: 340px;
   max-height: 200px;
   padding: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  background-color: rgba(255, 255, 255, 0.45);
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  border: 1px solid #9370db;
+  background-color: #9370db73;
+  box-shadow: 0 0 10px 1px #000000;
   backdrop-filter: blur(15px);
   transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
   cursor: pointer;
 
   h2 {
-    color: #000000;
+    color: #ffffff;
   }
 
   p {
-    color: #333333;
+    color: #ffffff;
   }
 
   .card-footer {
     font-size: 10px;
-    color: #0a2a5e;
+    color: #536d97;
   }
 
   &:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 20px 5px #e6b8e6;
   }
 }

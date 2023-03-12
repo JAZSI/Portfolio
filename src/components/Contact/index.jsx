@@ -95,8 +95,8 @@ const Contact = () => {
                       }`}
                     >
                       {success
-                        ? 'Your message has been sent!'
-                        : 'There was an error sending your message.'}
+                        ? "Your message has been sent. I'll get back to you soon UwU."
+                        : 'There was an error sending your message. (╥﹏╥)'}
                     </p>
                   )}
                 </li>
@@ -117,7 +117,7 @@ const Contact = () => {
           <Map />
         </div>
       </div>
-      <Loader type="pacman" />
+      <Loader type="line-scale-pulse-out-rapid" />
     </>
   );
 };

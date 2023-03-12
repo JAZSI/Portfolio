@@ -9,7 +9,6 @@ import LogoTitle from '../../assets/images/J.png';
 import BackgroundImage from '../../assets/images/background.png';
 
 import AnimatedLetters from '../AnimatedLetters';
-// import Background from '../Background';
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
@@ -55,7 +54,6 @@ const Home = () => {
               options={{
                 strings: [
                   'Frontend Developer',
-                  'Discord Bot Developer',
                   'Self-taught Developer',
                   'Hobbyist Developer',
                 ],
@@ -63,7 +61,7 @@ const Home = () => {
                 loop: true,
                 delay: 50,
                 cursor: '_',
-                deleteSpeed: 50,
+                deleteSpeed: 90,
               }}
             />
           </h2>
@@ -75,7 +73,7 @@ const Home = () => {
       <div className="background">
         <img src={BackgroundImage} alt="Background" className="image" />
       </div>
-      <Loader type="pacman" />
+      <Loader type="line-scale-pulse-out-rapid" />
     </>
   );
 };

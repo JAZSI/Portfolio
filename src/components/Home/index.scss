@@ -15,22 +15,22 @@
       margin: 0;
       font-family: 'Coolvetica';
       font-weight: 400;
-  
+
       &::before {
         content: '<h1>';
         font-family: 'La Belle Aurore';
-        color: #e6e6fa;
+        color: #e6b8e6;
         font-size: 18px;
         position: absolute;
         margin-top: -40px;
         left: -15px;
         opacity: 0.6;
       }
-  
+
       &::after {
         content: '<h1/>';
         font-family: 'La Belle Aurore';
-        color: #e6e6fa;
+        color: #e6b8e6;
         font-size: 18px;
         position: absolute;
         margin-top: 18px;
@@ -38,7 +38,7 @@
         animation: fadeIn 1s 1.7s backwards;
         opacity: 0.6;
       }
-  
+
       img {
         width: 32px;
         margin-left: 20px;
@@ -48,7 +48,7 @@
         animation-delay: 1.4s;
       }
     }
-  
+
     h2 {
       display: flex;
       color: #d895ff;
@@ -59,7 +59,7 @@
       letter-spacing: 3px;
       animation: fadeIn 1s 1.8s backwards;
     }
-  
+
     .flat-button {
       font-family: 'Helvetica Neue';
       letter-spacing: 4px;
@@ -69,24 +69,22 @@
       font-weight: 700;
       background: rgb(255, 255, 255);
       color: blueviolet;
-      border-radius: .5rem;
+      border-radius: 0.5rem;
       border-bottom: 2px solid blueviolet;
       border-right: 2px solid blueviolet;
       border-top: 2px solid white;
       border-left: 2px solid white;
       transition-duration: 1s;
-      transition-property: border-top, 
-          border-left, 
-          border-bottom,
-          border-right,
-          box-shadow;
-  
+      transition-property: border-top, border-left, border-bottom, border-right,
+        box-shadow;
+
       &:hover {
         border-top: 2px solid blueviolet;
         border-left: 2px solid blueviolet;
         border-bottom: 2px solid rgb(238, 103, 238);
         border-right: 2px solid rgb(238, 103, 238);
-        box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px;
+        box-shadow: rgba(240, 46, 170, 0.4) 5px 5px,
+          rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px;
       }
     }
   }
@@ -96,14 +94,38 @@
   position: relative;
   z-index: 0;
   height: 100vh;
-  
+
   .image {
     position: absolute;
     height: 100%;
     right: 0;
     opacity: 0.3;
-    -webkit-filter: drop-shadow(10px 10px 10px #F5D5E5);
-    filter: drop-shadow(10px 10px 10px #F5D5E5);
+    filter: drop-shadow(10px 10px 10px #f5d5e5);
+    animation: glow 5s ease-in-out infinite;
+  }
+}
+
+@keyframes glow {
+  0% {
+    filter: drop-shadow(10px 10px 10px #f5d5e5);
+  }
+  16.666% {
+    filter: drop-shadow(10px 10px 10px #f9c3d3);
+  }
+  33.333% {
+    filter: drop-shadow(10px 10px 10px #fbb1c1);
+  }
+  50% {
+    filter: drop-shadow(10px 10px 10px #fd9faf);
+  }
+  66.666% {
+    filter: drop-shadow(10px 10px 10px #ff8d9d);
+  }
+  83.333% {
+    filter: drop-shadow(10px 10px 10px #ff7b8b);
+  }
+  100% {
+    filter: drop-shadow(10px 10px 10px #f5d5e5);
   }
 }
 

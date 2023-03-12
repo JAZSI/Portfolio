@@ -3,7 +3,6 @@ import './index.scss';
 import { loadFull } from 'tsparticles';
 import { useCallback, useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
-
 import Particles from 'react-particles';
 
 import Sidebar from '../Sidebar';

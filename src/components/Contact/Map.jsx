@@ -22,7 +22,7 @@ function Map() {
     >
       <Geographies
         geography="/map.json"
-        fill="#e6ccff"
+        fill="#E6B8E673"
         stroke="#000000"
         strokeWidth={0.5}
       >
@@ -42,8 +42,14 @@ function Map() {
           strokeLinecap: 'round',
         }}
       >
-        <text x="-8" textAnchor="end" alignmentBaseline="middle" fill="#FFF">
-          {'Jaszi'}
+        <text
+          x="-8"
+          textAnchor="end"
+          alignmentBaseline="middle"
+          fill="#FFF"
+          style={{ fontSize: '24px' }}
+        >
+          {'Jaszi is here'}
         </text>
       </Annotation>
     </ComposableMap>

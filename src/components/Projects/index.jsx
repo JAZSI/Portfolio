@@ -48,7 +48,7 @@ function Projects() {
           <ProjectsData username="JAZSI" />
         </div>
       </div>
-      <Loader type="pacman" />
+      <Loader type="line-scale-pulse-out-rapid" />
     </>
   );
 }
