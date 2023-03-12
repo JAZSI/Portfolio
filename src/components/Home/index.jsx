@@ -6,9 +6,10 @@ import Typewriter from 'typewriter-effect';
 import Loader from 'react-loaders';
 
 import LogoTitle from '../../assets/images/J.png';
+import BackgroundImage from '../../assets/images/background.png';
 
 import AnimatedLetters from '../AnimatedLetters';
-import Background from '../Background';
+// import Background from '../Background';
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
@@ -71,7 +72,9 @@ const Home = () => {
           </Link>
         </div>
       </div>
-      <Background />
+      <div className="background">
+        <img src={BackgroundImage} alt="Background" className="image" />
+      </div>
       <Loader type="pacman" />
     </>
   );

@@ -11,53 +11,6 @@ import Sidebar from '../Sidebar';
 const Layout = () => {
   const [isPageVisible, setIsPageVisible] = useState(true);
 
-  const options = {
-    particles: {
-      number: {
-        value: 50,
-        density: {
-          enable: true,
-          area: 800,
-        },
-      },
-      color: {
-        value: ['#9F2B68', '#BF40BF', '#AA336A', '#CBC3E3', '#CF9FFF'],
-      },
-      shape: {
-        type: 'circle',
-      },
-      opacity: {
-        value: 0.3,
-      },
-      size: {
-        value: { min: 1, max: 8 },
-      },
-      links: {
-        enable: true,
-        distance: 150,
-        color: '#808080',
-        opacity: 0.2,
-        width: 1,
-      },
-      move: {
-        enable: true,
-        speed: 1,
-        direction: 'none',
-        random: false,
-        straight: false,
-        outModes: 'out',
-      },
-    },
-    interactivity: {
-      events: {
-        onHover: {
-          enable: true,
-          mode: 'grab',
-        },
-      },
-    },
-  };
-
   const particlesInit = useCallback(async (engine) => {
     await loadFull(engine);
   }, []);
@@ -91,7 +44,7 @@ const Layout = () => {
           <span className="bottom-tag-html">&lt;/html&gt;</span>
         </span>
       </div>
-      <Particles options={options} init={particlesInit} />
+      <Particles url="/particles.json" init={particlesInit} />
     </div>
   );
 };

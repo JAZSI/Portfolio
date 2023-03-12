@@ -40,8 +40,7 @@
 
 .about-page,
 .contact-page,
-.projects-page,
-.games-page {
+.projects-page {
   .text-zone {
     position: absolute;
     left: 10%;
@@ -89,7 +88,7 @@
     }
 
     p {
-      font-size: 13px;
+      font-size: 15px;
       color: #fff;
       font-family: sans-serif;
       font-weight: 300;
@@ -117,12 +116,6 @@
   }
 }
 
-.portfolio-page {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
 @media screen and (max-width: 1200px) {
   .page {
     position: initial;
@@ -135,8 +128,7 @@
 
     &.about-page,
     &.contact-page,
-    &.projects-page,
-    &.games-page {
+    &.projects-page {
       .text-zone {
         position: initial;
         transform: none;

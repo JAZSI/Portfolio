@@ -1,17 +1,16 @@
 import './index.scss';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { useEffect, useRef, useState } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
-
-import 'react-toastify/dist/ReactToastify.css';
 
 import emailjs from '@emailjs/browser';
 import Loader from 'react-loaders';
 
 import AnimatedLetters from '../AnimatedLetters';
+import Map from './Map';
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
+  const [success, setSuccess] = useState(null);
+
   const refForm = useRef();
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -26,18 +25,20 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
-      .sendForm('{Service ID}', '{Template ID}', refForm.current, '{Public ID}')
+      .sendForm(
+        'service_ohxltgn',
+        'template_2nb8pqk',
+        refForm.current,
+        'SQ7LkhgWg-NY5I2DQ'
+      )
       .then(
-        () => {
-          toast.success('Message successfully sent!', {
-            position: toast.POSITION.BOTTOM_RIGHT,
-          });
-          window.location.reload(false);
+        (result) => {
+          console.log(result.text);
+          setSuccess(true);
         },
-        () => {
-          toast.error('Failed to send the message, please try again', {
-            position: toast.POSITION.BOTTOM_RIGHT,
-          });
+        (error) => {
+          console.log(error.text);
+          setSuccess(false);
         }
       );
   };
@@ -87,6 +88,19 @@ const Contact = () => {
                   ></textarea>
                 </li>
                 <li>
+                  {success && (
+                    <p
+                      className={`message ${
+                        success ? 'success-message' : 'error-message'
+                      }`}
+                    >
+                      {success
+                        ? 'Your message has been sent!'
+                        : 'There was an error sending your message.'}
+                    </p>
+                  )}
+                </li>
+                <li>
                   <input type="submit" className="flat-button" value="SEND" />
                 </li>
               </ul>
@@ -97,23 +111,11 @@ const Contact = () => {
           Jaszi
           <br />
           Philippines
-          <br />
-          Secret place,
-          <br />I totally live here
           <span>zumikoyazi@gmail.com</span>
         </div>
         <div className="map-wrap">
-          <MapContainer
-            center={[14.353578139896404, 120.96043511598609]}
-            zoom={4}
-          >
-            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-            <Marker position={[14.353578139896404, 120.96043511598609]}>
-              <Popup>Jaszi totally lives here, don't come over UwU</Popup>
-            </Marker>
-          </MapContainer>
+          <Map />
         </div>
-        <ToastContainer />
       </div>
       <Loader type="pacman" />
     </>
