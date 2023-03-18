@@ -22,7 +22,7 @@ function Map() {
     >
       <Geographies
         geography="/map.json"
-        fill="#E6B8E673"
+        fill="#E6B8E6"
         stroke="#000000"
         strokeWidth={0.5}
       >

@@ -29,19 +29,13 @@ function Projects() {
               idx={15}
             />
           </h1>
-          <div className="profile-buttons">
-            <button onClick={() => openLink('https://github.com/JAZSI')}>
-              GitHub Profile
-            </button>
-            <br />
-            <button onClick={() => openLink('https://huggingface.co/Jaszii')}>
-              Hugging Face Profile
-            </button>
-            <br />
-            <button onClick={() => openLink('https://replit.com/@JASZI')}>
-              Replit Profile
-            </button>
-          </div>
+          <p>
+            Welcome to the projects section of my portfolio! As a self-taught
+            developer, I have worked on a variety of projects that showcase my
+            passion for learning and problem-solving. In this section, you will
+            find a collection of my most recent and exciting projects that
+            highlight my skills and abilities in various domains.
+          </p>
         </div>
 
         <div className="project-cards">

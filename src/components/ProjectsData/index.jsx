@@ -2,7 +2,7 @@ import './index.scss';
 import { useEffect, useState } from 'react';
 import Card from '../Card';
 
-const ProjectsData = ({ username }) => {
+function ProjectsData({ username }) {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {

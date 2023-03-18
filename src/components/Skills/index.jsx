@@ -23,6 +23,8 @@ function Skills() {
     'JavaScript',
     'Electron',
     'React',
+    'NextJS',
+    'Vue',
     'Vite',
     'NodeJS',
     'Jquery',

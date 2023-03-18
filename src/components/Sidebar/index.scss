@@ -1,5 +1,5 @@
 .nav-bar {
-  background: linear-gradient(0deg, #1e1e1e 0, #2d033b);
+  background: linear-gradient(0deg, #1e1e1e75 0, #2d033b75);
   width: 60px;
   height: 100%;
   position: absolute;
@@ -103,30 +103,6 @@
     a.active {
       svg {
         color: #920049;
-      }
-    }
-  }
-
-  ul {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    display: block;
-    padding: 0;
-    list-style: none;
-    text-align: center;
-    margin: 0;
-
-    li {
-      a {
-        padding: 7px 0;
-        display: block;
-        font-size: 15px;
-        line-height: 16px;
-      }
-
-      &:hover svg {
-        color: #e6b8e6;
       }
     }
   }

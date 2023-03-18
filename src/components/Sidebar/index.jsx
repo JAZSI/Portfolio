@@ -1,11 +1,6 @@
 import './index.scss';
 
 import {
-  faGithub,
-  faTwitch,
-  faYoutube,
-} from '@fortawesome/free-brands-svg-icons';
-import {
   faFolder,
   faEnvelope,
   faHome,
@@ -21,7 +16,7 @@ import LogoSubtitle from '../../assets/images/Jaszi.png';
 import Logo from '../../assets/images/J.png';
 import { useState } from 'react';
 
-const Sidebar = () => {
+function Sidebar() {
   const [showNav, setShowNav] = useState(false);
 
   return (
@@ -89,31 +84,6 @@ const Sidebar = () => {
           className="close-icon"
         />
       </nav>
-      <ul>
-        <li>
-          <a target="_blank" rel="noreferrer" href="https://github.com/JAZSI">
-            <FontAwesomeIcon icon={faGithub} color="#E6B8E6" />
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://www.youtube.com/channel/UCqKWA0x62qEaPlWOM0ZRv7A"
-          >
-            <FontAwesomeIcon icon={faYoutube} color="#E6B8E6" />
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://www.twitch.tv/jaszi_ow"
-          >
-            <FontAwesomeIcon icon={faTwitch} color="#E6B8E6" />
-          </a>
-        </li>
-      </ul>
       <FontAwesomeIcon
         onClick={() => setShowNav(true)}
         icon={faBars}

@@ -1,23 +1,27 @@
-import './index.scss';
-import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import "./index.scss";
+import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { OrbitControls, Stage } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
 
-import Typewriter from 'typewriter-effect';
-import Loader from 'react-loaders';
+import Typewriter from "typewriter-effect";
+import Loader from "react-loaders";
 
-import LogoTitle from '../../assets/images/J.png';
-import BackgroundImage from '../../assets/images/background.png';
+import LogoTitle from "../../assets/images/J.png";
+import AhriLeft from "../../assets/images/Ahri-left.png";
+import AhriRight from "../../assets/images/Ahri-right.png";
 
-import AnimatedLetters from '../AnimatedLetters';
+import AnimatedLetters from "../AnimatedLetters";
+import MiniRoom from "./MiniRoom";
 
-const Home = () => {
-  const [letterClass, setLetterClass] = useState('text-animate');
-  const nameArray = ['a', 's', 'z', 'i'];
-  const jobArray = ['H', 'o', 'b', 'b', 'y', 'i', 's', 't'];
+function Home() {
+  const [letterClass, setLetterClass] = useState("text-animate");
+  const nameArray = ["a", "s", "z", "i"];
+  const jobArray = ["H", "o", "b", "b", "y", "i", "s", "t"];
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      setLetterClass('text-animate-hover');
+      setLetterClass("text-animate-hover");
     }, 4000);
 
     return () => {
@@ -28,7 +32,7 @@ const Home = () => {
   return (
     <>
       <div className="container home-page">
-        <div className="text-zone">
+        <div className="title">
           <h1>
             <span className={letterClass}>H</span>
             <span className={`${letterClass} _12`}>i,</span>
@@ -53,14 +57,14 @@ const Home = () => {
             <Typewriter
               options={{
                 strings: [
-                  'Frontend Developer',
-                  'Self-taught Developer',
-                  'Hobbyist Developer',
+                  "Frontend Developer",
+                  "Self-taught Developer",
+                  "Hobbyist Developer",
                 ],
                 autoStart: true,
                 loop: true,
                 delay: 50,
-                cursor: '_',
+                cursor: "_",
                 deleteSpeed: 90,
               }}
             />
@@ -69,13 +73,20 @@ const Home = () => {
             CONTACT ME
           </Link>
         </div>
+        {/* <Canvas className="mini-room">
+          <Stage environment="city" intensity={0.5} >
+            <MiniRoom />
+          </Stage>
+          <OrbitControls />
+        </Canvas> */}
       </div>
       <div className="background">
-        <img src={BackgroundImage} alt="Background" className="image" />
+        {/* <img src={AhriRight} alt="Background" className="ahri-right" />
+        <img src={AhriLeft} alt="Background" className="ahri-left" /> */}
       </div>
       <Loader type="line-scale-pulse-out-rapid" />
     </>
   );
-};
+}
 
 export default Home;

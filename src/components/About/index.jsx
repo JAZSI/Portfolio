@@ -1,12 +1,12 @@
 import './index.scss';
 
 import {
-  faCss3,
   faGitAlt,
-  faHtml5,
   faJsSquare,
   faNodeJs,
   faReact,
+  faVuejs,
+  faSass,
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
@@ -15,7 +15,7 @@ import Loader from 'react-loaders';
 
 import AnimatedLetters from '../AnimatedLetters';
 
-const About = () => {
+function About() {
   const [letterClass, setLetterClass] = useState('text-animate');
 
   useEffect(() => {
@@ -66,10 +66,10 @@ const About = () => {
               <FontAwesomeIcon icon={faNodeJs} color="#215732" />
             </div>
             <div className="face2">
-              <FontAwesomeIcon icon={faHtml5} color="#F06529" />
+              <FontAwesomeIcon icon={faVuejs} color="#42B883" />
             </div>
             <div className="face3">
-              <FontAwesomeIcon icon={faCss3} color="#28A4D9" />
+              <FontAwesomeIcon icon={faSass} color="#CD6799" />
             </div>
             <div className="face4">
               <FontAwesomeIcon icon={faReact} color="#5ED4F4" />

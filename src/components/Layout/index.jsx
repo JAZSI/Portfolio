@@ -7,7 +7,7 @@ import Particles from 'react-particles';
 
 import Sidebar from '../Sidebar';
 
-const Layout = () => {
+function Layout() {
   const [isPageVisible, setIsPageVisible] = useState(true);
 
   const particlesInit = useCallback(async (engine) => {

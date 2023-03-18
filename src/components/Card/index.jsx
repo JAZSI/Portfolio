@@ -1,6 +1,6 @@
 import './index.scss';
 
-const Card = ({ title, description, footer, url }) => {
+function Card({ title, description, footer, url }) {
   const handleClick = () => {
     window.open(url, '_blank');
   };

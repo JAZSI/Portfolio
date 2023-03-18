@@ -7,7 +7,7 @@ import Loader from 'react-loaders';
 import AnimatedLetters from '../AnimatedLetters';
 import Map from './Map';
 
-const Contact = () => {
+function Contact() {
   const [letterClass, setLetterClass] = useState('text-animate');
   const [success, setSuccess] = useState(null);
 

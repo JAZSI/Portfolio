@@ -1,11 +1,15 @@
 .home-page {
-  .text-zone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     position: absolute;
     z-index: 1;
-    left: 10%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40%;
+    width: 15%;
     max-height: 90%;
 
     h1 {
@@ -19,18 +23,17 @@
       &::before {
         content: '<h1>';
         font-family: 'La Belle Aurore';
-        color: #e6b8e6;
+        color: #ff69b4;
         font-size: 18px;
         position: absolute;
-        margin-top: -40px;
-        left: -15px;
+        left: -10px;
         opacity: 0.6;
       }
 
       &::after {
         content: '<h1/>';
         font-family: 'La Belle Aurore';
-        color: #e6b8e6;
+        color: #ff69b4;
         font-size: 18px;
         position: absolute;
         margin-top: 18px;
@@ -62,6 +65,7 @@
 
     .flat-button {
       font-family: 'Helvetica Neue';
+      width: 38%;
       letter-spacing: 4px;
       padding: 10px 18px;
       text-decoration: none;
@@ -95,7 +99,16 @@
   z-index: 0;
   height: 100vh;
 
-  .image {
+  .ahri-left {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    opacity: 0.3;
+    filter: drop-shadow(10px 10px 10px #f5d5e5);
+    animation: glow 5s ease-in-out infinite;
+  }
+
+  .ahri-right {
     position: absolute;
     height: 100%;
     right: 0;
@@ -137,20 +150,24 @@
   }
 
   .home-page {
-    .text-zone {
+    .title {
       position: initial;
       width: 100%;
       transform: none;
       padding: 10px;
       box-sizing: border-box;
-    }
 
-    .flat-button {
-      float: none;
-      display: block;
-      margin: 20px auto 0 auto;
-      width: 125px;
+      .flat-button {
+        float: none;
+        display: block;
+        margin: 20px auto 0 auto;
+        width: 105px;
+      }
     }
+  }
+
+  .mini-room {
+    display: none;
   }
 
   .background {
