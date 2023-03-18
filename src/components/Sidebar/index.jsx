@@ -1,4 +1,4 @@
-import './index.scss';
+import "./index.scss";
 
 import {
   faFolder,
@@ -8,13 +8,13 @@ import {
   faBars,
   faClose,
   faLaptopCode,
-} from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link, NavLink } from 'react-router-dom';
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link, NavLink } from "react-router-dom";
 
-import LogoSubtitle from '../../assets/images/Jaszi.png';
-import Logo from '../../assets/images/J.png';
-import { useState } from 'react';
+import LogoSubtitle from "../../assets/images/Jaszi.png";
+import Logo from "../../assets/images/J.png";
+import { useState } from "react";
 
 function Sidebar() {
   const [showNav, setShowNav] = useState(false);
@@ -25,7 +25,7 @@ function Sidebar() {
         <img src={Logo} alt="Logo" />
         <img className="sub-logo" src={LogoSubtitle} alt="Jaszi" />
       </Link>
-      <nav className={showNav ? 'mobile-show' : ''}>
+      <nav className={showNav ? "mobile-show" : ""}>
         {/* Home button */}
         <NavLink
           exact="true"
@@ -55,16 +55,6 @@ function Sidebar() {
         >
           <FontAwesomeIcon icon={faFolder} color="#E6B8E6" />
         </NavLink>
-        {/* Skills button */}
-        <NavLink
-          onClick={() => setShowNav(false)}
-          exact="true"
-          activeclassname="active"
-          className="skills-link"
-          to="/skills"
-        >
-          <FontAwesomeIcon icon={faLaptopCode} color="#E6B8E6" />
-        </NavLink>
         {/* Contact button */}
         <NavLink
           onClick={() => setShowNav(false)}
@@ -93,6 +83,6 @@ function Sidebar() {
       />
     </div>
   );
-};
+}
 
 export default Sidebar;

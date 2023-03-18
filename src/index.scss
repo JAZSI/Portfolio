@@ -12,6 +12,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
+  cursor: url('./assets//cursors/default.png'), auto;
 }
 
 @media screen and (max-width: 1200px) {

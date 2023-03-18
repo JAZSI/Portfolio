@@ -1,5 +1,4 @@
 .nav-bar {
-  background: linear-gradient(0deg, #1e1e1e75 0, #2d033b75);
   width: 60px;
   height: 100%;
   position: absolute;
@@ -8,6 +7,7 @@
   min-height: 500px;
 
   .logo {
+    cursor: url('../../assets/cursors/pointer.png'), auto;
     display: block;
     padding: 8px 0;
 
@@ -32,6 +32,7 @@
     width: 100%;
 
     a {
+      cursor: url('../../assets/cursors/pointer.png'), auto;
       font-size: 22px;
       color: #e6b8e6;
       display: block;
@@ -57,7 +58,7 @@
       }
 
       &:after {
-        content: '';
+        content: "";
         font-size: 9px;
         letter-spacing: 2px;
         position: absolute;
@@ -71,32 +72,26 @@
 
       &:first-child {
         &:after {
-          content: 'HOME';
+          content: "HOME";
         }
       }
     }
 
     a.about-link {
       &:after {
-        content: 'ABOUT';
+        content: "ABOUT";
       }
     }
 
     a.contact-link {
       &:after {
-        content: 'CONTACT';
+        content: "CONTACT";
       }
     }
 
     a.project-link {
       &:after {
-        content: 'PROJECTS';
-      }
-    }
-
-    a.skills-link {
-      &:after {
-        content: 'SKILLS';
+        content: "PROJECTS";
       }
     }
 
@@ -134,6 +129,7 @@
       position: fixed;
       z-index: 2;
       margin: 0;
+      padding-top: 70px;
 
       a {
         display: flex;

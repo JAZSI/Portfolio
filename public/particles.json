@@ -14,7 +14,7 @@
       "type": "circle"
     },
     "opacity": {
-      "value": 0.02
+      "value": 0.05
     },
     "size": {
       "value": { "min": 1, "max": 8 }

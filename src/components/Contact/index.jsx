@@ -1,20 +1,28 @@
-import './index.scss';
-import { useEffect, useRef, useState } from 'react';
+import "./index.scss";
+import { useEffect, useRef, useState } from "react";
+import {
+  faGitAlt,
+  faJsSquare,
+  faNodeJs,
+  faReact,
+  faVuejs,
+  faSass,
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import emailjs from '@emailjs/browser';
-import Loader from 'react-loaders';
+import emailjs from "@emailjs/browser";
+import Loader from "react-loaders";
 
-import AnimatedLetters from '../AnimatedLetters';
-import Map from './Map';
+import AnimatedLetters from "../AnimatedLetters";
 
 function Contact() {
-  const [letterClass, setLetterClass] = useState('text-animate');
+  const [letterClass, setLetterClass] = useState("text-animate");
   const [success, setSuccess] = useState(null);
 
   const refForm = useRef();
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      setLetterClass('text-animate-hover');
+      setLetterClass("text-animate-hover");
     }, 4000);
 
     return () => {
@@ -26,10 +34,10 @@ function Contact() {
     e.preventDefault();
     emailjs
       .sendForm(
-        'service_ohxltgn',
-        'template_2nb8pqk',
+        "service_ohxltgn",
+        "template_2nb8pqk",
         refForm.current,
-        'SQ7LkhgWg-NY5I2DQ'
+        "SQ7LkhgWg-NY5I2DQ"
       )
       .then(
         (result) => {
@@ -49,7 +57,7 @@ function Contact() {
         <div className="text-zone">
           <h1>
             <AnimatedLetters
-              strArray={['C', 'o', 'n', 't', 'a', 'c', 't', ' ', 'm', 'e']}
+              strArray={["C", "o", "n", "t", "a", "c", "t", " ", "m", "e"]}
               idx={15}
               letterClass={letterClass}
             />
@@ -91,12 +99,12 @@ function Contact() {
                   {success && (
                     <p
                       className={`message ${
-                        success ? 'success-message' : 'error-message'
+                        success ? "success-message" : "error-message"
                       }`}
                     >
                       {success
                         ? "Your message has been sent. I'll get back to you soon UwU."
-                        : 'There was an error sending your message. (╥﹏╥)'}
+                        : "There was an error sending your message. (╥﹏╥)"}
                     </p>
                   )}
                 </li>
@@ -107,19 +115,32 @@ function Contact() {
             </form>
           </div>
         </div>
-        <div className="info-map">
-          Jaszi
-          <br />
-          Philippines
-          <span>zumikoyazi@gmail.com</span>
-        </div>
-        <div className="map-wrap">
-          <Map />
+        <div className="stage-cube-cont">
+          <div className="cubespinner">
+            <div className="face1">
+              <FontAwesomeIcon icon={faNodeJs} color="#215732" />
+            </div>
+            <div className="face2">
+              <FontAwesomeIcon icon={faVuejs} color="#42B883" />
+            </div>
+            <div className="face3">
+              <FontAwesomeIcon icon={faSass} color="#CD6799" />
+            </div>
+            <div className="face4">
+              <FontAwesomeIcon icon={faReact} color="#5ED4F4" />
+            </div>
+            <div className="face5">
+              <FontAwesomeIcon icon={faJsSquare} color="#EFD81D" />
+            </div>
+            <div className="face6">
+              <FontAwesomeIcon icon={faGitAlt} color="#EC4D28" />
+            </div>
+          </div>
         </div>
       </div>
       <Loader type="line-scale-pulse-out-rapid" />
     </>
   );
-};
+}
 
 export default Contact;

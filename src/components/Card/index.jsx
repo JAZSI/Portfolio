@@ -1,17 +1,28 @@
-import './index.scss';
+import "./index.scss";
 
-function Card({ title, description, footer, url }) {
-  const handleClick = () => {
-    window.open(url, '_blank');
+function Card({ title, image, link, description }) {
+  const cardStyle = {
+    backgroundImage: `url(${image})`,
   };
 
   return (
-    <div className="card" onClick={handleClick}>
-      <h2>{title}</h2>
-      <p>{description}</p>
-      <p className="card-footer">{footer}</p>
+    <div className="card">
+      <div className="image" style={cardStyle}></div>
+      <div className="content">
+        <span className="title">{title}</span>
+        <p className="desc">{description}</p>
+        <a
+          href={link}
+          className="action"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Find out more
+          <span aria-hidden="true"> →</span>
+        </a>
+      </div>
     </div>
   );
-};
+}
 
 export default Card;

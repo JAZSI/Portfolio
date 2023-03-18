@@ -32,8 +32,8 @@
     }
   }
 
-  input[type='text'],
-  input[type='email'] {
+  input[type="text"],
+  input[type="email"] {
     width: 100%;
     border: 0;
     background: #e6b8e6;
@@ -95,52 +95,87 @@
   }
 }
 
-.info-map {
+.stage-cube-cont {
+  width: 50%;
+  height: 100%;
+  top: 0;
+  padding-top: 18%;
+  margin-left: 0;
   position: absolute;
-  background-color: #000000;
-  top: 50px;
-  right: 30%;
-  z-index: 999999;
-  width: 267px;
-  padding: 20px;
-  color: #ffffff;
-  font-family: 'Helvetica';
-  font-size: 17px;
-  font-weight: 300;
-  opacity: 0;
-  animation: fadeIn 1s 1.5s;
-  animation-fill-mode: forwards;
+  right: 0;
+  overflow: hidden;
 
-  span {
-    font-size: 16px;
-    display: block;
-    padding-top: 20px;
-    color: #e6b8e6;
+  .cubespinner {
+    animation-name: spincube;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 12s;
+    transform-style: preserve-3d;
+    transform-origin: 100px 100px 0;
+    margin-left: calc(50% - 100px);
+
+    div {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border: 1px solid #ccc;
+      background: rgba(255, 255, 255, 0.4);
+      text-align: center;
+      font-size: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 20px 0px #e6b8e6;
+    }
+
+    .face1 {
+      transform: translateZ(100px);
+    }
+    .face2 {
+      transform: rotateY(90deg) translateZ(100px);
+    }
+    .face3 {
+      transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+    }
+    .face4 {
+      transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+    }
+    .face5 {
+      transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+    }
+    .face6 {
+      transform: rotateX(-90deg) translateZ(100px);
+    }
   }
 }
 
-.map-wrap {
-  // background: linear-gradient(
-  //   to bottom right,
-  //   #70010175,
-  //   #80008075,
-  //   #ba55d375,
-  //   #9370db75
-  // );
-  float: right;
-  width: 53%;
-  height: 100%;
+@keyframes spincube {
+  from,
+  to {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  16% {
+    transform: rotateY(-90deg);
+  }
+  33% {
+    transform: rotateY(-90deg) rotateZ(90deg);
+  }
+  50% {
+    transform: rotateY(-180deg) rotateZ(90deg);
+  }
+  66% {
+    transform: rotateY(-270deg) rotateZ(90deg);
+  }
+  83% {
+    transform: rotateX(90deg);
+  }
 }
 
 @media screen and (max-width: 1200px) {
-  .map-wrap {
-    float: none;
+  .stage-cube-cont {
+    position: initial;
     width: 100%;
-    height: 400px;
-    margin: 0;
-  }
-
-  .info-map {
-    display: none;
+    height: 0%;
+    overflow: visible;
   }
 }

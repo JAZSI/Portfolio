@@ -1,4 +1,4 @@
-import './index.scss';
+import "./index.scss";
 
 function AnimatedLetters({ letterClass, strArray, idx }) {
   return (
@@ -10,6 +10,6 @@ function AnimatedLetters({ letterClass, strArray, idx }) {
       ))}
     </span>
   );
-};
+}
 
 export default AnimatedLetters;

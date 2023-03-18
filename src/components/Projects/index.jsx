@@ -1,22 +1,25 @@
-import './index.scss';
+import "./index.scss";
 
-import { useEffect, useState } from 'react';
-import Loader from 'react-loaders';
-import AnimatedLetters from '../AnimatedLetters';
-import ProjectsData from '../ProjectsData';
+import { useEffect, useState } from "react";
+
+import Loader from "react-loaders";
+
+import AnimatedLetters from "../AnimatedLetters";
+import Card from "../Card";
+import projects from "./projects";
+
+import J from "../../assets/images/Jaszi.png";
 
 function Projects() {
-  const [letterClass, setLetterClass] = useState('text-animate');
+  const [letterClass, setLetterClass] = useState("text-animate");
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      setLetterClass('text-animate-hover');
+      setLetterClass("text-animate-hover");
     }, 3000);
 
     return () => clearTimeout(timeoutId);
-  }, []);
-
-  const openLink = (link) => window.open(link, '_blank');
+  });
 
   return (
     <>
@@ -25,7 +28,7 @@ function Projects() {
           <h1>
             <AnimatedLetters
               letterClass={letterClass}
-              strArray={['M', 'y', ' ', 'P', 'r', 'o', 'j', 'e', 'c', 't', 's']}
+              strArray={["M", "y", " ", "P", "r", "o", "j", "e", "c", "t", "s"]}
               idx={15}
             />
           </h1>
@@ -39,7 +42,17 @@ function Projects() {
         </div>
 
         <div className="project-cards">
-          <ProjectsData username="JAZSI" />
+          <div className="card-wrapper">
+            {projects.map((project) => (
+              <Card
+                key={project.id}
+                title={project.title}
+                description={project.description}
+                link={project.link}
+                image={project.image ? project.image : J}
+              />
+            ))}
+          </div>
         </div>
       </div>
       <Loader type="line-scale-pulse-out-rapid" />

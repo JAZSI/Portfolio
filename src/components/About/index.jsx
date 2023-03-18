@@ -1,26 +1,22 @@
-import './index.scss';
+import "./index.scss";
 
-import {
-  faGitAlt,
-  faJsSquare,
-  faNodeJs,
-  faReact,
-  faVuejs,
-  faSass,
-} from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from "react";
+import { OrbitControls } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
 
-import Loader from 'react-loaders';
+import Loader from "react-loaders";
 
-import AnimatedLetters from '../AnimatedLetters';
+import Icon from "../../assets/images/Icon.png";
+
+import AnimatedLetters from "../AnimatedLetters";
+import MiniRoom from "./MiniRoom";
 
 function About() {
-  const [letterClass, setLetterClass] = useState('text-animate');
+  const [letterClass, setLetterClass] = useState("text-animate");
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      setLetterClass('text-animate-hover');
+      setLetterClass("text-animate-hover");
     }, 3000);
 
     return () => {
@@ -31,10 +27,11 @@ function About() {
     <>
       <div className="container about-page">
         <div className="text-zone">
+          <img src={Icon} alt="Jaszi" className="Jaszi" />
           <h1>
             <AnimatedLetters
               letterClass={letterClass}
-              strArray={['A', 'b', 'o', 'u', 't', ' ', 'm', 'e']}
+              strArray={["A", "b", "o", "u", "t", " ", "m", "e"]}
               idx={15}
             />
           </h1>
@@ -60,32 +57,20 @@ function About() {
           </p>
         </div>
 
-        <div className="stage-cube-cont">
-          <div className="cubespinner">
-            <div className="face1">
-              <FontAwesomeIcon icon={faNodeJs} color="#215732" />
-            </div>
-            <div className="face2">
-              <FontAwesomeIcon icon={faVuejs} color="#42B883" />
-            </div>
-            <div className="face3">
-              <FontAwesomeIcon icon={faSass} color="#CD6799" />
-            </div>
-            <div className="face4">
-              <FontAwesomeIcon icon={faReact} color="#5ED4F4" />
-            </div>
-            <div className="face5">
-              <FontAwesomeIcon icon={faJsSquare} color="#EFD81D" />
-            </div>
-            <div className="face6">
-              <FontAwesomeIcon icon={faGitAlt} color="#EC4D28" />
-            </div>
-          </div>
+        <div className="mini-room">
+          <Canvas camera={{ position: [-13, 4, 25] }}>
+            <OrbitControls autoRotate enableRotate={false} enableZoom={false} />
+            <ambientLight intensity={0.5} />
+            <directionalLight position={[5, 2, 15]} intensity={0.5} />
+            <Suspense fallback={null}>
+              <MiniRoom />
+            </Suspense>
+          </Canvas>
         </div>
       </div>
       <Loader type="line-scale-pulse-out-rapid" />
     </>
   );
-};
+}
 
 export default About;

@@ -4,25 +4,6 @@
   position: absolute;
 }
 
-.top-tags {
-  bottom: auto;
-  top: 35px;
-}
-
-.tags {
-  color: #ff69b4;
-  opacity: 0.6;
-  position: absolute;
-  bottom: 0;
-  left: 120px;
-  font-size: 18px;
-  font-family: 'La Belle Aurore';
-}
-
-.bottom-tag-html {
-  margin-left: -20px;
-}
-
 .container {
   width: 100%;
   will-change: contents;
@@ -54,7 +35,7 @@
 
     h1 {
       font-size: 53px;
-      font-family: 'Coolvetica';
+      font-family: "Coolvetica";
       color: #e6b8e6;
       font-weight: 400;
       margin-top: 0;
@@ -63,9 +44,9 @@
       left: 10px;
 
       &::before {
-        content: '<h1>';
+        content: "<h1>";
         color: #ff69b4;
-        font-family: 'La Belle Aurore';
+        font-family: "La Belle Aurore";
         font-size: 18px;
         position: absolute;
         margin-top: -10px;
@@ -75,9 +56,9 @@
       }
 
       &::after {
-        content: '<h1/>';
+        content: "<h1/>";
         color: #ff69b4;
-        font-family: 'La Belle Aurore';
+        font-family: "La Belle Aurore";
         font-size: 18px;
         line-height: 18px;
         position: absolute;
