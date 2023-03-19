@@ -6,8 +6,6 @@ import Typewriter from "typewriter-effect";
 import Loader from "react-loaders";
 
 import LogoTitle from "../../assets/images/J.png";
-// import AhriLeft from "../../assets/images/Ahri-left.png";
-// import AhriRight from "../../assets/images/Ahri-right.png";
 
 import AnimatedLetters from "../AnimatedLetters";
 
@@ -68,10 +66,7 @@ function Home() {
           </Link>
         </div>
       </div>
-      <div className="background">
-        {/* <img src={AhriLeft} alt="Background" className="ahri-left" /> */}
-        {/* <img src={AhriRight} alt="Background" className="ahri-right" /> */}
-      </div>
+      <div className="background"></div>
       <Loader type="line-scale-pulse-out-rapid" />
     </>
   );

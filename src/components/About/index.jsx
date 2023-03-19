@@ -6,7 +6,7 @@ import { Canvas } from "@react-three/fiber";
 
 import Loader from "react-loaders";
 
-import Icon from "../../assets/images/Icon.png";
+import Gif from "../../assets/gifs/1.gif";
 
 import AnimatedLetters from "../AnimatedLetters";
 import MiniRoom from "./MiniRoom";
@@ -27,7 +27,6 @@ function About() {
     <>
       <div className="container about-page">
         <div className="text-zone">
-          <img src={Icon} alt="Jaszi" className="Jaszi" />
           <h1>
             <AnimatedLetters
               letterClass={letterClass}
@@ -55,13 +54,21 @@ function About() {
             forward to all the opportunities that await me as I continue to
             learn and grow in this field.
           </p>
+          <img src={Gif} alt="gif" className="gif" />
         </div>
 
         <div className="mini-room">
           <Canvas camera={{ position: [-13, 4, 25] }}>
-            <OrbitControls autoRotate enableRotate={false} enableZoom={false} />
-            <ambientLight intensity={0.5} />
-            <directionalLight position={[5, 2, 15]} intensity={0.5} />
+            <OrbitControls
+              autoRotate
+              enableRotate={false}
+              enableZoom={false}
+            />
+            <ambientLight intensity={0.3} />
+            <directionalLight
+              position={[-10, 30, 25]}
+              intensity={0.5}
+            />
             <Suspense fallback={null}>
               <MiniRoom />
             </Suspense>

@@ -4,6 +4,7 @@ const projects = [
     title: "Anime-Database",
     description: "For finding Anime data (Not an anime streaming website)",
     link: "https://github.com/JAZSI/Anime-Database",
+    image: "https://raw.githubusercontent.com/JAZSI/Anime-Database/main/preview.png",
   },
   {
     id: 581235181,
@@ -37,6 +38,7 @@ const projects = [
     title: "Elysia-Bot-Website",
     description: "A website for a discord bot",
     link: "https://github.com/JAZSI/Elysia-Bot-Website",
+    image: "https://raw.githubusercontent.com/JAZSI/Elysia-Bot-Website/main/preview.png",
   },
   {
     id: 585152897,
@@ -78,9 +80,10 @@ const projects = [
   },
   {
     id: 613962806,
-    title: "Simple-Todo-list-Vue-App",
-    description: null,
-    link: "https://github.com/JAZSI/Simple-Todo-list-Vue-App",
+    title: "Simple-Todo-List",
+    description: "A simple todo list app using Vue",
+    link: "https://github.com/JAZSI/Simple-Todo-List",
+    image: "https://raw.githubusercontent.com/JAZSI/Simple-Todo-List/main/preview.png",
   },
   {
     id: 590966030,

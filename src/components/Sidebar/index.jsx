@@ -7,7 +7,6 @@ import {
   faUser,
   faBars,
   faClose,
-  faLaptopCode,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, NavLink } from "react-router-dom";

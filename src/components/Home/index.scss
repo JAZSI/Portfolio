@@ -4,6 +4,7 @@
   align-items: center;
 
   .title {
+    position: absolute;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -31,7 +32,7 @@
 
     h2 {
       display: flex;
-      color: #d895ff;
+      color: #920049;
       margin-top: 20px;
       font-weight: 400;
       font-size: 11px;
@@ -76,24 +77,12 @@
   position: relative;
   z-index: 0;
   height: 100vh;
-
-  .ahri-left {
-    position: absolute;
-    height: 100%;
-    left: 0;
-    opacity: 0.3;
-    filter: drop-shadow(10px 10px 10px #f5d5e5);
-    animation: glow 5s ease-in-out infinite;
-  }
-
-  .ahri-right {
-    position: absolute;
-    height: 100%;
-    right: 0;
-    opacity: 0.3;
-    filter: drop-shadow(10px 10px 10px #f5d5e5);
-    animation: glow 5s ease-in-out infinite;
-  }
+  width: 100vw;
+  background-image: url("../../assets/images/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 @keyframes glow {

@@ -28,6 +28,11 @@ $primary-color: #e5b8f4;
   src: url('./assets/fonts/PlayfairDisplaySC-Regular.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Kabrio Soft Bold';
+  src: url('./assets/fonts/Kabrio-Soft-Bold.ttf') format('truetype');
+}
+
 input,
 textarea {
   font-family: 'Helvetica Neue';
