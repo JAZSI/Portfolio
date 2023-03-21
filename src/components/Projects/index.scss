@@ -1,3 +1,24 @@
+.icon-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  
+  svg {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    background-color: #313131;
+    border-radius: 10px;
+    padding: 5px;
+    transition: transform 0.2s ease-in-out;
+    
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
 .project-cards {
   float: right;
   width: 55%;
@@ -25,6 +46,99 @@
     background: linear-gradient(#c8adf0, #9e74d2);
     border-radius: 8px;
   }
+
+  .card {
+    position: relative;
+    max-width: 300px;
+    height: 250px;
+    border-radius: 0.5rem;
+    background-color: #313131;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    border: 1px solid transparent;
+    font-family: "Montserrat";
+  
+    .image {
+      width: 100%;
+      height: 100px;
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-color: #9e74d2;
+    }
+  
+    .content {
+      padding: 1.1rem;
+      .title {
+        color: #fff;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        font-weight: 600;
+      }
+  
+      .desc {
+        margin-top: 0.5rem;
+        color: #bed1f7;
+        font-size: 0.875rem;
+      }
+  
+      .action {
+        position: absolute;
+        display: inline-flex;
+        margin-top: 1rem;
+        color: #ffffff;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        font-weight: 500;
+        align-items: center;
+        gap: 0.25rem;
+        background-color: #9e74d2;
+        padding: 4px 8px;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        bottom: 40px;
+  
+        span {
+          transition: 0.3s ease;
+        }
+  
+        &:hover span {
+          transform: translateX(4px);
+        }
+      }
+    }
+  
+    .details {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 10px;
+      color: #bed1f7;
+      margin-bottom: 10px;
+  
+      .stars-forks {
+        display: flex;
+        align-items: center;
+        font-size: 10px;
+        color: #bed1f7;
+        gap: 0.25rem;
+        justify-content: flex-end;
+        margin-top: 0.5rem;
+        margin-left: 1rem;
+      }
+  
+      .language {
+        margin-right: 20px;
+      }
+    }
+  }
+  
 }
 
 @media screen and (max-width: 1200px) {

@@ -1,6 +1,7 @@
-import "./index.scss";
+import { faStar, faCodeFork } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function Card({ title, image, link, description }) {
+function Card({ title, image, link, description, stars, forks, language }) {
   const cardStyle = {
     backgroundImage: `url(${image})`,
   };
@@ -20,6 +21,15 @@ function Card({ title, image, link, description }) {
           Find out more
           <span aria-hidden="true"> →</span>
         </a>
+      </div>
+      <div className="details">
+        <div className="stars-forks">
+          <FontAwesomeIcon icon={faStar} className="star-icon" />
+          {stars}
+          <FontAwesomeIcon icon={faCodeFork} className="fork-icon" />
+          {forks}
+        </div>
+        <span className="language">{language}</span>
       </div>
     </div>
   );
