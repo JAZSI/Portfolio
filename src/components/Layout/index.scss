@@ -36,7 +36,7 @@
     h1 {
       font-size: 53px;
       font-family: "Coolvetica";
-      color: #E0BFB8;
+      color: #FFDEAD;
       font-weight: 400;
       margin-top: 0;
       position: relative;
@@ -45,7 +45,7 @@
 
       &::before {
         content: "<h1>";
-        color: #E0BFB8;
+        color: #FFDEAD;
         font-family: "La Belle Aurore";
         font-size: 18px;
         position: absolute;
@@ -57,7 +57,7 @@
 
       &::after {
         content: "<h1/>";
-        color: #E0BFB8;
+        color: #FFDEAD;
         font-family: "La Belle Aurore";
         font-size: 18px;
         line-height: 18px;
