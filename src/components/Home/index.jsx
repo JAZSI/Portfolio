@@ -65,8 +65,14 @@ function Home() {
             CONTACT ME
           </Link>
         </div>
+        <div className="back-text">
+          <span>J</span>
+          <span>A</span>
+          <span>S</span>
+          <span>Z</span>
+          <span>I</span>
+        </div>
       </div>
-      <div className="background"></div>
       <Loader type="line-scale-pulse-out-rapid" />
     </>
   );

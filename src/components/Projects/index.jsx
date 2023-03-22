@@ -1,21 +1,6 @@
 import "./index.scss";
 
 import { useEffect, useState } from "react";
-import {
-  faCss3Alt,
-  faGitAlt,
-  faGithub,
-  faHtml5,
-  faJsSquare,
-  faMarkdown,
-  faNodeJs,
-  faNpm,
-  faPython,
-  faReact,
-  faSass,
-  faVuejs,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Loader from "react-loaders";
 
@@ -62,21 +47,6 @@ function Projects() {
             find a collection of my most recent and exciting projects that
             highlight my skills and abilities in various domains.
           </p>
-
-          <div class="icon-container">
-            <FontAwesomeIcon icon={faHtml5} color="#E34F26" />
-            <FontAwesomeIcon icon={faCss3Alt} color="#1572B6" />
-            <FontAwesomeIcon icon={faJsSquare} color="#F7DF1E" />
-            <FontAwesomeIcon icon={faReact} color="#61DAFB" />
-            <FontAwesomeIcon icon={faVuejs} color="#4FC08D" />
-            <FontAwesomeIcon icon={faSass} color="#CC6699" />
-            <FontAwesomeIcon icon={faNodeJs} color="#339933" />
-            <FontAwesomeIcon icon={faPython} color="#3776AB" />
-            <FontAwesomeIcon icon={faGitAlt} color="#F05032" />
-            <FontAwesomeIcon icon={faGithub} color="#181717" />
-            <FontAwesomeIcon icon={faNpm} color="#CB3837" />
-            <FontAwesomeIcon icon={faMarkdown} color="#000000" />
-          </div>
         </div>
 
         <div className="project-cards">

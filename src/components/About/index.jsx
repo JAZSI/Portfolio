@@ -1,15 +1,25 @@
 import "./index.scss";
 
-import { useEffect, useState, Suspense } from "react";
-import { OrbitControls } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
+import { useEffect, useState } from "react";
+import {
+  faCss3Alt,
+  faGitAlt,
+  faGithub,
+  faHtml5,
+  faJsSquare,
+  faMarkdown,
+  faNodeJs,
+  faNpm,
+  faPython,
+  faReact,
+  faSass,
+  faVuejs,
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Loader from "react-loaders";
 
-import Gif from "../../assets/gifs/1.gif";
-
 import AnimatedLetters from "../AnimatedLetters";
-import MiniRoom from "./MiniRoom";
 
 function About() {
   const [letterClass, setLetterClass] = useState("text-animate");
@@ -54,25 +64,44 @@ function About() {
             forward to all the opportunities that await me as I continue to
             learn and grow in this field.
           </p>
-          <img src={Gif} alt="gif" className="gif" />
+
+          <div class="icon-container">
+            <FontAwesomeIcon icon={faHtml5} color="#E34F26" />
+            <FontAwesomeIcon icon={faCss3Alt} color="#1572B6" />
+            <FontAwesomeIcon icon={faJsSquare} color="#F7DF1E" />
+            <FontAwesomeIcon icon={faReact} color="#61DAFB" />
+            <FontAwesomeIcon icon={faVuejs} color="#4FC08D" />
+            <FontAwesomeIcon icon={faSass} color="#CC6699" />
+            <FontAwesomeIcon icon={faNodeJs} color="#339933" />
+            <FontAwesomeIcon icon={faPython} color="#3776AB" />
+            <FontAwesomeIcon icon={faGitAlt} color="#F05032" />
+            <FontAwesomeIcon icon={faGithub} color="#181717" />
+            <FontAwesomeIcon icon={faNpm} color="#CB3837" />
+            <FontAwesomeIcon icon={faMarkdown} color="#000000" />
+          </div>
         </div>
 
-        <div className="mini-room">
-          <Canvas camera={{ position: [-13, 4, 25] }}>
-            <OrbitControls
-              autoRotate
-              enableRotate={false}
-              enableZoom={false}
-            />
-            <ambientLight intensity={0.3} />
-            <directionalLight
-              position={[-10, 30, 25]}
-              intensity={0.5}
-            />
-            <Suspense fallback={null}>
-              <MiniRoom />
-            </Suspense>
-          </Canvas>
+        <div className="stage-cube-cont">
+          <div className="cubespinner">
+            <div className="face1">
+              <FontAwesomeIcon icon={faNodeJs} color="#215732" />
+            </div>
+            <div className="face2">
+              <FontAwesomeIcon icon={faVuejs} color="#42B883" />
+            </div>
+            <div className="face3">
+              <FontAwesomeIcon icon={faSass} color="#CD6799" />
+            </div>
+            <div className="face4">
+              <FontAwesomeIcon icon={faReact} color="#5ED4F4" />
+            </div>
+            <div className="face5">
+              <FontAwesomeIcon icon={faJsSquare} color="#EFD81D" />
+            </div>
+            <div className="face6">
+              <FontAwesomeIcon icon={faGitAlt} color="#EC4D28" />
+            </div>
+          </div>
         </div>
       </div>
       <Loader type="line-scale-pulse-out-rapid" />

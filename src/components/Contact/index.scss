@@ -36,41 +36,63 @@
   input[type="email"] {
     width: 100%;
     border: 0;
-    background: #e6b8e6;
+    background: #2e2e2e;
     height: 50px;
     font-size: 16px;
     color: #000000;
     padding: 0 20px;
     box-sizing: border-box;
+    border: 1px solid #e6e6e6;
+    transition: border-color 0.3s ease-in-out;
+
+    &::placeholder {
+      color: #b3b3b3;
+    }
+
+    &:focus {
+      border-color: #E0BFB8;
+      outline: none;
+    }
   }
 
   textarea {
     width: 100%;
     border: 0;
-    background: #e6b8e6;
+    background: #2e2e2e;
     height: 50px;
     font-size: 16px;
     color: #000000;
     padding: 20px;
     min-height: 150px;
     box-sizing: border-box;
+    border: 1px solid #e6e6e6;
+    transition: border-color 0.3s ease-in-out;
+
+    &::placeholder {
+      color: #b3b3b3;
+    }
+
+    &:focus {
+      border-color: #E0BFB8;
+      outline: none;
+    }
   }
 
   .flat-button {
-    color: #e6b8e6;
+    color: #e6e6e6;
     background: 0 0;
     font: 11px;
     letter-spacing: 3px;
     text-decoration: none;
     padding: 8px 10px;
-    border: 1px solid #e6b8e6;
+    border: 1px solid #e6e6e6;
     float: right;
+    cursor: pointer;
     border-radius: 4px;
-    transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
 
     &:hover {
-      background: #e6b8e6;
-      color: #000000;
+      border-color: #E0BFB8;
     }
   }
 
@@ -95,87 +117,16 @@
   }
 }
 
-.stage-cube-cont {
-  width: 50%;
+.earth {
   height: 100%;
-  top: 0;
-  padding-top: 18%;
-  margin-left: 0;
-  position: absolute;
-  right: 0;
-  overflow: hidden;
-
-  .cubespinner {
-    animation-name: spincube;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-duration: 12s;
-    transform-style: preserve-3d;
-    transform-origin: 100px 100px 0;
-    margin-left: calc(50% - 100px);
-
-    div {
-      position: absolute;
-      width: 200px;
-      height: 200px;
-      border: 1px solid #ccc;
-      background: rgba(255, 255, 255, 0.4);
-      text-align: center;
-      font-size: 100px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 0 20px 0px #e6b8e6;
-    }
-
-    .face1 {
-      transform: translateZ(100px);
-    }
-    .face2 {
-      transform: rotateY(90deg) translateZ(100px);
-    }
-    .face3 {
-      transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
-    }
-    .face4 {
-      transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
-    }
-    .face5 {
-      transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
-    }
-    .face6 {
-      transform: rotateX(-90deg) translateZ(100px);
-    }
-  }
-}
-
-@keyframes spincube {
-  from,
-  to {
-    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  }
-  16% {
-    transform: rotateY(-90deg);
-  }
-  33% {
-    transform: rotateY(-90deg) rotateZ(90deg);
-  }
-  50% {
-    transform: rotateY(-180deg) rotateZ(90deg);
-  }
-  66% {
-    transform: rotateY(-270deg) rotateZ(90deg);
-  }
-  83% {
-    transform: rotateX(90deg);
-  }
+  width: 50%;
+  float: right;
 }
 
 @media screen and (max-width: 1200px) {
-  .stage-cube-cont {
-    position: initial;
+  .earth {
+    height: auto;
     width: 100%;
-    height: 0%;
-    overflow: visible;
+    float: none;
   }
 }

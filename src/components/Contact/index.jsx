@@ -1,19 +1,13 @@
 import "./index.scss";
 import { useEffect, useRef, useState } from "react";
-import {
-  faGitAlt,
-  faJsSquare,
-  faNodeJs,
-  faReact,
-  faVuejs,
-  faSass,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { OrbitControls, Stage } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
 
 import emailjs from "@emailjs/browser";
 import Loader from "react-loaders";
 
 import AnimatedLetters from "../AnimatedLetters";
+import Earth from "./Earth";
 
 function Contact() {
   const [letterClass, setLetterClass] = useState("text-animate");
@@ -63,8 +57,8 @@ function Contact() {
             />
           </h1>
           <p>
-            If you need to get in touch with me, please feel free to use the
-            following contact form:
+            For inquiries or to schedule a consultation, please fill out the
+            form below or contact me directly:
           </p>
           <div className="contact-form">
             <form ref={refForm} onSubmit={sendEmail}>
@@ -115,27 +109,14 @@ function Contact() {
             </form>
           </div>
         </div>
-        <div className="stage-cube-cont">
-          <div className="cubespinner">
-            <div className="face1">
-              <FontAwesomeIcon icon={faNodeJs} color="#215732" />
-            </div>
-            <div className="face2">
-              <FontAwesomeIcon icon={faVuejs} color="#42B883" />
-            </div>
-            <div className="face3">
-              <FontAwesomeIcon icon={faSass} color="#CD6799" />
-            </div>
-            <div className="face4">
-              <FontAwesomeIcon icon={faReact} color="#5ED4F4" />
-            </div>
-            <div className="face5">
-              <FontAwesomeIcon icon={faJsSquare} color="#EFD81D" />
-            </div>
-            <div className="face6">
-              <FontAwesomeIcon icon={faGitAlt} color="#EC4D28" />
-            </div>
-          </div>
+
+        <div className="earth">
+          <Canvas>
+            <Stage environment="city" intensity={0.6}>
+              <Earth />
+            </Stage>
+            <OrbitControls autoRotate enableRotate={false} enableZoom={false} />
+          </Canvas>
         </div>
       </div>
       <Loader type="line-scale-pulse-out-rapid" />

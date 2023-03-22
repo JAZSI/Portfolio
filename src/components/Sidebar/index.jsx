@@ -32,7 +32,7 @@ function Sidebar() {
           to="/"
           onClick={() => setShowNav(false)}
         >
-          <FontAwesomeIcon icon={faHome} color="#DA0B5B" />
+          <FontAwesomeIcon icon={faHome} color="#F8C8DC" />
         </NavLink>
         {/* About button */}
         <NavLink
@@ -42,7 +42,7 @@ function Sidebar() {
           className="about-link"
           to="/about"
         >
-          <FontAwesomeIcon icon={faUser} color="#DA0B5B" />
+          <FontAwesomeIcon icon={faUser} color="#F8C8DC" />
         </NavLink>
         {/* Projects button */}
         <NavLink
@@ -52,7 +52,7 @@ function Sidebar() {
           className="project-link"
           to="/projects"
         >
-          <FontAwesomeIcon icon={faFolder} color="#DA0B5B" />
+          <FontAwesomeIcon icon={faFolder} color="#F8C8DC" />
         </NavLink>
         {/* Contact button */}
         <NavLink
@@ -62,13 +62,13 @@ function Sidebar() {
           className="contact-link"
           to="/contact"
         >
-          <FontAwesomeIcon icon={faEnvelope} color="#DA0B5B" />
+          <FontAwesomeIcon icon={faEnvelope} color="#F8C8DC" />
         </NavLink>
         {/* Close Icon */}
         <FontAwesomeIcon
           onClick={() => setShowNav(false)}
           icon={faClose}
-          color="#DA0B5B"
+          color="#F8C8DC"
           size="3x"
           className="close-icon"
         />
@@ -76,7 +76,7 @@ function Sidebar() {
       <FontAwesomeIcon
         onClick={() => setShowNav(true)}
         icon={faBars}
-        color="#DA0B5B"
+        color="#F8C8DC"
         size="3x"
         className="hamburger-icon"
       />
