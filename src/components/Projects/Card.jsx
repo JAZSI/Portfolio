@@ -18,7 +18,7 @@ function Card({ title, image, link, description, stars, forks, language }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Find out more
+          Source Code
           <span aria-hidden="true"> →</span>
         </a>
       </div>

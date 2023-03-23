@@ -39,7 +39,7 @@
     background: #2e2e2e;
     height: 50px;
     font-size: 16px;
-    color: #000000;
+    color: #fff;
     padding: 0 20px;
     box-sizing: border-box;
     border: 1px solid #e6e6e6;
@@ -50,7 +50,7 @@
     }
 
     &:focus {
-      border-color: #FFDEAD;
+      border-color: #f7a8c9;
       outline: none;
     }
   }
@@ -61,7 +61,7 @@
     background: #2e2e2e;
     height: 50px;
     font-size: 16px;
-    color: #000000;
+    color: #fff;
     padding: 20px;
     min-height: 150px;
     box-sizing: border-box;
@@ -73,7 +73,7 @@
     }
 
     &:focus {
-      border-color: #FFDEAD;
+      border-color: #f7a8c9;
       outline: none;
     }
   }
@@ -92,7 +92,7 @@
     transition: border-color 0.3s ease-in-out;
 
     &:hover {
-      border-color: #FFDEAD;
+      border-color: #f7a8c9;
     }
   }
 

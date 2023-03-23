@@ -15,7 +15,7 @@ $primary-color: #e5b8f4;
 
 @font-face {
   font-family: 'Coolvetica';
-  src: url('./assets/fonts/CoolveticaRg-Regular.woff2') format('woff2');
+  src: url('./assets/fonts/CoolveticaRG\ Regular.ttf') format('truetype');
 }
 
 @font-face {
@@ -36,6 +36,11 @@ $primary-color: #e5b8f4;
 @font-face {
   font-family: 'Nunito';
   src: url('./assets/fonts/Nunito.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Century Gothic Bold';
+  src: url('./assets/fonts/Century\ Gothic\ Bold.ttf') format('truetype');
 }
 
 input,

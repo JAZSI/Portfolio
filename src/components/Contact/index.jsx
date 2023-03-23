@@ -33,6 +33,12 @@ function Contact() {
         refForm.current,
         "SQ7LkhgWg-NY5I2DQ"
       )
+      // .sendForm(
+      //   "{SERVICE_ID}",
+      //   "{TEMPLATE_ID}",
+      //   refForm.current,
+      //   "{PUBLIC_ID}"
+      // )
       .then(
         (result) => {
           console.log(result.text);
@@ -57,14 +63,20 @@ function Contact() {
             />
           </h1>
           <p>
-            For inquiries or to schedule a consultation, please fill out the
-            form below or contact me directly:
+            Please use the form below to get in touch with me. I'll do my best
+            to respond as soon as possible. Thank you!:
           </p>
           <div className="contact-form">
             <form ref={refForm} onSubmit={sendEmail}>
               <ul>
                 <li className="half">
-                  <input placeholder="Name" type="text" name="name" required />
+                  <input
+                    placeholder="Name"
+                    type="text"
+                    name="name"
+                    required
+                    autoComplete="off"
+                  />
                 </li>
                 <li className="half">
                   <input
@@ -72,6 +84,7 @@ function Contact() {
                     type="email"
                     name="email"
                     required
+                    autoComplete="off"
                   />
                 </li>
                 <li>
@@ -80,6 +93,7 @@ function Contact() {
                     type="text"
                     name="subject"
                     required
+                    autoComplete="off"
                   />
                 </li>
                 <li>

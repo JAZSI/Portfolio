@@ -7,7 +7,7 @@
   min-height: 500px;
 
   .logo {
-    cursor: url('../../assets/cursors/pointer.png'), auto;
+    cursor: pointer;
     display: block;
     padding: 8px 0;
 
@@ -32,9 +32,9 @@
     width: 100%;
 
     a {
-      cursor: url('../../assets/cursors/pointer.png'), auto;
+      cursor: pointer;
       font-size: 22px;
-      color: #F8C8DC;
+      color: #f7a8c9;
       display: block;
       line-height: 51px;
       height: 51px;
@@ -46,7 +46,7 @@
       }
 
       &:hover {
-        color: #F8C8DC;
+        color: #f7a8c9;
 
         svg {
           opacity: 0;
@@ -97,7 +97,7 @@
 
     a.active {
       svg {
-        color: #F33A6A;
+        color: #AA336A;
       }
     }
   }

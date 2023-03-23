@@ -42,7 +42,7 @@
     }
 
     .flat-button {
-      cursor: url('../../assets/cursors/pointer.png'), auto;
+      cursor: pointer;
       font-family: "Helvetica Neue";
       width: 105px;
       letter-spacing: 4px;
@@ -73,7 +73,7 @@
   }
 
   .back-text {
-    font-family: sans-serif;
+    font-family: "Century Gothic Bold";
     width: max-content;
     position: absolute;
     top: 50%;
@@ -86,6 +86,13 @@
       font-weight: 700;
       -webkit-text-stroke: 1px #FFFFFF30;
       -webkit-text-fill-color: transparent;
+      animation: fadeInUp 1s 1s;
+      animation-fill-mode: forwards;
+      transition: -webkit-text-stroke 0.5s ease-in-out;
+
+      &:hover {
+        -webkit-text-stroke: 1px #FFFFFF;
+      }
     }
   }
 }

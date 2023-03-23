@@ -12,6 +12,8 @@
   height: 100%;
   overflow: auto;
   padding: 30px;
+  animation: fadeInRight 1s 1s;
+  animation-fill-mode: forwards;
 
   &::-webkit-scrollbar {
     width: 3px;
