@@ -7,7 +7,8 @@ import Loader from "react-loaders";
 import AnimatedLetters from "../AnimatedLetters";
 import Card from "./Card";
 
-import J from "../../assets/images/Jaszi.png";
+// import J from "../../assets/images/Jaszi.png";
+import projects from "./projects";
 
 function Projects() {
   const [letterClass, setLetterClass] = useState("text-animate");
@@ -15,8 +16,9 @@ function Projects() {
 
   useEffect(() => {
     const fetchRepos = async () => {
-      const response = await fetch("https://api.github.com/users/JAZSI/repos");
-      const data = await response.json();
+      // const response = await fetch("https://api.github.com/users/JAZSI/repos");
+      // const data = await response.json();
+      const data = projects;
       setRepos(data);
     };
 
@@ -57,7 +59,7 @@ function Projects() {
                 title={repo.name}
                 description={repo.description}
                 link={repo.html_url}
-                image={J}
+                image={repo.image}
                 forks={repo.forks_count}
                 stars={repo.stargazers_count}
                 language={repo.language}
