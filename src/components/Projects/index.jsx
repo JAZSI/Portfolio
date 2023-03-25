@@ -7,7 +7,7 @@ import Loader from "react-loaders";
 import AnimatedLetters from "../AnimatedLetters";
 import Card from "./Card";
 
-// import J from "../../assets/images/Jaszi.png";
+import noImage from "../../assets/images/NoImage.png";
 import projects from "./projects";
 
 function Projects() {
@@ -43,7 +43,7 @@ function Projects() {
             />
           </h1>
           <p>
-            Welcome to the projects section of my portfolio! As a self-taught
+            Welcome to the projects section of my portfolio! As an amateur
             developer, I have worked on a variety of projects that showcase my
             passion for learning and problem-solving. In this section, you will
             find a collection of my most recent and exciting projects that
@@ -59,7 +59,7 @@ function Projects() {
                 title={repo.name}
                 description={repo.description}
                 link={repo.html_url}
-                image={repo.image}
+                image={repo.image ? repo.image : noImage}
                 forks={repo.forks_count}
                 stars={repo.stargazers_count}
                 language={repo.language}

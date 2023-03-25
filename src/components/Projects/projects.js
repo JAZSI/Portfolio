@@ -20,7 +20,7 @@ const projects = [
     image: "/projects/ASCII-Art-Converter.png",
   },
   {
-    id: 609546924,
+    id: 1,
     name: "DialoGPT-Elysia",
     description:
       "A fine-tuned version of the DialoGPT-medium model trained on the dialogues of Elysia from the game Honkai Impact.",
@@ -50,6 +50,16 @@ const projects = [
     stargazers_count: 0,
     language: "JavaScript",
     image: "/projects/Discord-v14-template.png",
+  },
+  {
+    id: 618829563,
+    name: "Ei",
+    description: "Ei is a versatile and fun anime-themed discord bot that can enhance any server's anime experience.",
+    html_url: "https://github.com/JAZSI/Ei",
+    forks_count: 0,
+    stargazers_count: 0,
+    language: "JavaScript",
+    image: "/projects/Ei.png",
   },
   {
     id: 599529176,
