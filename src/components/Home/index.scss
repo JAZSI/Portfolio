@@ -32,7 +32,7 @@
 
     h2 {
       display: flex;
-      color: #FF10F0;
+      color: #ff10f0;
       margin-top: 20px;
       font-weight: 400;
       font-size: 11px;
@@ -84,14 +84,14 @@
       display: inline-block;
       font-size: 35vw;
       font-weight: 700;
-      -webkit-text-stroke: 1px #FFFFFF30;
+      -webkit-text-stroke: 1px #ffffff30;
       -webkit-text-fill-color: transparent;
       animation: fadeInUp 1s 1s;
       animation-fill-mode: forwards;
       transition: -webkit-text-stroke 0.5s ease-in-out;
 
       &:hover {
-        -webkit-text-stroke: 1px #FFFFFF;
+        -webkit-text-stroke: 1px #ffffff;
       }
     }
   }
@@ -130,9 +130,5 @@
     .back-text {
       display: none;
     }
-  }
-
-  .background {
-    display: none;
   }
 }

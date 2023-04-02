@@ -65,7 +65,7 @@ function About() {
             learn and grow in this field.
           </p>
 
-          <div class="icon-container">
+          <div className="icon-container">
             <FontAwesomeIcon icon={faHtml5} color="#E34F26" />
             <FontAwesomeIcon icon={faCss3Alt} color="#1572B6" />
             <FontAwesomeIcon icon={faJsSquare} color="#F7DF1E" />
@@ -80,9 +80,8 @@ function About() {
             <FontAwesomeIcon icon={faMarkdown} color="#000000" />
           </div>
         </div>
-
         <div className="stage-cube-cont">
-          <div className="cubespinner">
+          <div className="cube">
             <div className="face1">
               <FontAwesomeIcon icon={faNodeJs} color="#215732" />
             </div>
@@ -99,7 +98,7 @@ function About() {
               <FontAwesomeIcon icon={faJsSquare} color="#EFD81D" />
             </div>
             <div className="face6">
-              <FontAwesomeIcon icon={faGitAlt} color="#EC4D28" />
+              <FontAwesomeIcon icon={faPython} color="#3776AB" />
             </div>
           </div>
         </div>
