@@ -19,6 +19,10 @@
   animation-delay: 1s;
 }
 
+.particles {
+  z-index: -99;
+}
+
 .about-page,
 .projects-page,
 .skills-page,

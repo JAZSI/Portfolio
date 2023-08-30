@@ -36,7 +36,7 @@ function Layout() {
       <div className="page">
         <Outlet />
       </div>
-      <Particles url="/particles.json" init={particlesInit}/>
+      <Particles url="/particles.json" init={particlesInit} className='particles'/>
     </div>
   );
 };
