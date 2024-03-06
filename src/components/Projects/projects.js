@@ -154,6 +154,17 @@ const projects = [
     language: "NLP Model",
     image: "/projects/DialoGPT-Elysia.png",
   },
+  {
+    id: 2,
+    name: "Aqueous",
+    description:
+      "Aqueous is a side-scrolling platformer game where players control a protagonist named Aqueous.",
+    html_url: "https://jaszi.itch.io/aqueous",
+    forks_count: 0,
+    stargazers_count: 0,
+    language: "HTML",
+    image: "/projects/Aqueous.png",
+  },
 ];
 
 export default projects;
