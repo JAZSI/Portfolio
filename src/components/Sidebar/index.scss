@@ -3,7 +3,7 @@
   height: 100%;
   position: absolute;
   top: 0;
-  z-index: 3;
+  z-index: 5;
   min-height: 500px;
 
   .logo {
@@ -34,7 +34,7 @@
     a {
       cursor: pointer;
       font-size: 22px;
-      color: #f7a8c9;
+      color: #fff9a6;
       display: block;
       line-height: 51px;
       height: 51px;
@@ -46,7 +46,7 @@
       }
 
       &:hover {
-        color: #f7a8c9;
+        color: #fff9a6;
 
         svg {
           opacity: 0;

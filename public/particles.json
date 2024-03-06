@@ -1,7 +1,7 @@
 {
   "particles": {
     "number": {
-      "value": 50,
+      "value": 90,
       "density": {
         "enable": true,
         "area": 800
@@ -24,7 +24,12 @@
       "distance": 150,
       "color": "#808080",
       "opacity": 0.6,
-      "width": 1
+      "width": 1,
+      "triangles": {
+        "enable": true,
+        "color": "#ffffff",
+        "opacity": 0.1
+      }
     },
     "move": {
       "enable": true,
@@ -39,7 +44,7 @@
     "events": {
       "onHover": {
         "enable": true,
-        "mode": "grab"
+        "mode": "repulse"
       }
     }
   }

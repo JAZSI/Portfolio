@@ -36,29 +36,37 @@
   input[type="email"] {
     width: 100%;
     border: 0;
-    background: #2e2e2e;
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2); 
+    -webkit-backdrop-filter: blur(0);
+    backdrop-filter: blur(0); 
+    background-color: rgba(255, 255, 255, 0.2); 
     height: 50px;
     font-size: 16px;
     color: #fff;
     padding: 0 20px;
     box-sizing: border-box;
     border: 1px solid #e6e6e6;
-    transition: border-color 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 
     &::placeholder {
       color: #b3b3b3;
     }
 
     &:focus {
-      border-color: #f7a8c9;
+      border-color: #fff9a6;
       outline: none;
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
     }
   }
 
   textarea {
     width: 100%;
     border: 0;
-    background: #2e2e2e;
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2); 
+    -webkit-backdrop-filter: blur(0);
+    backdrop-filter: blur(0); 
+    background-color: rgba(255, 255, 255, 0.2); 
     height: 50px;
     font-size: 16px;
     color: #fff;
@@ -66,15 +74,17 @@
     min-height: 150px;
     box-sizing: border-box;
     border: 1px solid #e6e6e6;
-    transition: border-color 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 
     &::placeholder {
       color: #b3b3b3;
     }
 
     &:focus {
-      border-color: #f7a8c9;
+      border-color: #fff9a6;
       outline: none;
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
     }
   }
 
@@ -92,7 +102,7 @@
     transition: border-color 0.3s ease-in-out;
 
     &:hover {
-      border-color: #f7a8c9;
+      border-color: #fff9a6;
     }
   }
 

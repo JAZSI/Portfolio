@@ -126,10 +126,10 @@ function Contact() {
 
         <div className="earth">
           <Canvas>
-            <Stage environment="city" intensity={0.6}>
+            <Stage>
               <Earth />
             </Stage>
-            <OrbitControls autoRotate enableRotate={false} enableZoom={false} />
+            <OrbitControls autoRotate enableRotate enableZoom={false} />
           </Canvas>
         </div>
       </div>

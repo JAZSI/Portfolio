@@ -14,6 +14,8 @@ import {
   faReact,
   faSass,
   faVuejs,
+  faPhp,
+  faJava,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -45,18 +47,18 @@ function About() {
             />
           </h1>
           <p>
-            Hi! I'm a junior high school student who is learning how to code. I
-            find coding to be an exciting and challenging field, and I'm eager
-            to explore all that it has to offer. With so many different
-            programming languages and technologies to choose from, there's
-            always something new to learn.
+            Hi! I'm someone who is passionate at coding. I find
+            coding to be an exciting and challenging field, and I'm eager to
+            explore all that it has to offer. With so many different programming
+            languages and technologies to choose from, there's always something
+            new to learn.
           </p>
           <p>
-            Currently, I'm focused on developing my skills in two areas:
-            building discord bots and creating frontend websites. Both of these
-            areas have been incredibly rewarding to work on, and I've already
-            made a lot of progress. With each project that I complete, I'm able
-            to hone my skills and take on even more challenging projects.
+            Currently, I'm focused on developing my skills in two areas: making
+            games and creating websites. Both of these areas have been
+            incredibly rewarding to work on, and I've already made a lot of
+            progress. With each project that I complete, I'm able to hone my
+            skills and take on even more challenging projects.
           </p>
           <p>
             Overall, I'm really enjoying my journey into the world of coding.
@@ -78,6 +80,8 @@ function About() {
             <FontAwesomeIcon icon={faGithub} color="#181717" />
             <FontAwesomeIcon icon={faNpm} color="#CB3837" />
             <FontAwesomeIcon icon={faMarkdown} color="#000000" />
+            <FontAwesomeIcon icon={faPhp} color="#8892BF" />
+            <FontAwesomeIcon icon={faJava} color="#F89820" />
           </div>
         </div>
         <div className="stage-cube-cont">

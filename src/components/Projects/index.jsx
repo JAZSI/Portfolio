@@ -43,11 +43,10 @@ function Projects() {
             />
           </h1>
           <p>
-            Welcome to the projects section of my portfolio! As an amateur
+            Welcome to the projects section of my portfolio! As a passionate
             developer, I have worked on a variety of projects that showcase my
-            passion for learning and problem-solving. In this section, you will
-            find a collection of my most recent and exciting projects that
-            highlight my skills and abilities in various domains.
+            passion for programming. In this section, you will find a collection
+            of my projects.
           </p>
         </div>
 
